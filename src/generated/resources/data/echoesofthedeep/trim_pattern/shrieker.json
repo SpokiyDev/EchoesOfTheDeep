@@ -1,0 +1,7 @@
+{
+  "asset_id": "echoesofthedeep:shrieker",
+  "description": {
+    "translate": "trim_pattern.echoesofthedeep.shrieker"
+  },
+  "template_item": "echoesofthedeep:shrieker_armor_trim_smithing_template"
+}

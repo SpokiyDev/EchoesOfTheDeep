@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.spokiy.echoesofthedeep.mixin",
+  "refmap": "mixins.echoesofthedeep.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
