@@ -1,0 +1,17 @@
+{
+  "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
+
+  "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Арнамент «Віскун»",
+  "trim_pattern.echoesofthedeep.shrieker": "Арнамент «Віскун»",
+
+  "trim_material.echoesofthedeep.echo_shard": "Матэрыял — Скалк",
+
+  "item.minecraft.potion.effect.darkness": "Зелле цемры",
+  "item.minecraft.potion.effect.long_darkness": "Зелле цемры",
+  "item.minecraft.splash_potion.effect.darkness": "Выбухное зелле цемры",
+  "item.minecraft.splash_potion.effect.long_darkness": "Выбухное зелле цемры",
+  "item.minecraft.lingering_potion.effect.darkness": "Трывалае зелле цемры",
+  "item.minecraft.lingering_potion.effect.long_darkness": "Трывалае зелле цемры",
+  "item.minecraft.tipped_arrow.effect.darkness": "Страла цемры",
+  "item.minecraft.tipped_arrow.effect.long_darkness": "Страла цемры"
+}

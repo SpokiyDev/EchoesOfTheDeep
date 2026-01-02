@@ -4,5 +4,14 @@
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Kreischer-Rüstungsbesatz",
   "trim_pattern.echoesofthedeep.shrieker": "Kreischer-Rüstungsbesatz",
 
-  "trim_material.echoesofthedeep.echo_shard": "Echoscherbe"
+  "trim_material.echoesofthedeep.echo_shard": "Echoscherbe",
+
+  "item.minecraft.potion.effect.darkness": "Trank der Dunkelheit",
+  "item.minecraft.potion.effect.long_darkness": "Trank der Dunkelheit",
+  "item.minecraft.splash_potion.effect.darkness": "Wurftrank der Dunkelheit",
+  "item.minecraft.splash_potion.effect.long_darkness": "Wurftrank der Dunkelheit",
+  "item.minecraft.lingering_potion.effect.darkness": "Verweiltrank der Dunkelheit",
+  "item.minecraft.lingering_potion.effect.long_darkness": "Verweiltrank der Dunkelheit",
+  "item.minecraft.tipped_arrow.effect.darkness": "Pfeil der Dunkelheit",
+  "item.minecraft.tipped_arrow.effect.long_darkness": "Pfeil der Dunkelheit"
 }

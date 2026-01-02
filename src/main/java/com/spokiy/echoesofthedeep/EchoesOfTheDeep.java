@@ -1,13 +1,14 @@
 package com.spokiy.echoesofthedeep;
 
 import com.mojang.logging.LogUtils;
-import com.spokiy.echoesofthedeep.enchantment.EnchantmentRegistry;
-import com.spokiy.echoesofthedeep.event.ServerEvents;
+import com.spokiy.echoesofthedeep.enchantment.EDEnchantments;
+import com.spokiy.echoesofthedeep.event.EDEvents;
 import com.spokiy.echoesofthedeep.item.EDCreativeModeTabs;
 import com.spokiy.echoesofthedeep.item.EDItems;
+import com.spokiy.echoesofthedeep.item.alchemy.EDPotions;
 import com.spokiy.echoesofthedeep.loot.EDLootModifiers;
 import com.spokiy.echoesofthedeep.particle.ColoredFireworkParticle;
-import com.spokiy.echoesofthedeep.particle.ParticleRegistry;
+import com.spokiy.echoesofthedeep.particle.EDParticles;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
@@ -34,32 +35,35 @@ public class EchoesOfTheDeep
     public EchoesOfTheDeep(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
-        modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::setup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        EDItems.register(modEventBus);                          // Items
-        EDCreativeModeTabs.register(modEventBus);               // Creative tabs
-        EnchantmentRegistry.DEF_REG.register(modEventBus);      // Enchantments
-        ParticleRegistry.DEF_REG.register(modEventBus);         // Particles
-        EDLootModifiers.register(modEventBus);                    // Loot
+        EDItems.register(modEventBus);                              // Items
+        EDPotions.register(modEventBus);                            // Potions
+        EDCreativeModeTabs.register(modEventBus);                   // Creative tabs
+        EDEnchantments.register(modEventBus);                       // Enchantments
+        EDParticles.register(modEventBus);                          // Particles
+        EDLootModifiers.register(modEventBus);                      // Loot
+
+        MinecraftForge.EVENT_BUS.register(new EDEvents());
 
         // Register the item to a creative tab
-        MinecraftForge.EVENT_BUS.register(new ServerEvents());
-
         modEventBus.addListener(this::addCreative);
 
     }
 
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
+    private void setup(final FMLCommonSetupEvent event) {
+
+        EDPotions.registerPotionsRecipes();
+
     }
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(EDItems.SHRIEKER_SMITHING_TEMPLATE);
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+//            event.accept();
         }
 
     }
@@ -75,7 +79,7 @@ public class EchoesOfTheDeep
 
         @SubscribeEvent
         public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
-            event.registerSpriteSet(ParticleRegistry.COLORED_FIREWORK_PARTICLES.get(), ColoredFireworkParticle.Provider::new);
+            event.registerSpriteSet(EDParticles.COLORED_FIREWORK_PARTICLES.get(), ColoredFireworkParticle.Provider::new);
         }
     }
 }

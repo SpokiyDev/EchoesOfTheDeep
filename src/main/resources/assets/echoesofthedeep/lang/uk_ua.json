@@ -4,5 +4,14 @@
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Орнамент обладунків «Крикун»",
   "trim_pattern.echoesofthedeep.shrieker": "Орнамент обладунків «Крикун»",
 
-  "trim_material.echoesofthedeep.echo_shard": "Скалковий матеріал"
+  "trim_material.echoesofthedeep.echo_shard": "Скалковий матеріал",
+
+  "item.minecraft.potion.effect.darkness": "Зілля темряви",
+  "item.minecraft.potion.effect.long_darkness": "Зілля темряви",
+  "item.minecraft.splash_potion.effect.darkness": "Вибухове зілля темряви",
+  "item.minecraft.splash_potion.effect.long_darkness": "Вибухове зілля темряви",
+  "item.minecraft.lingering_potion.effect.darkness": "Осідальне зілля темряви",
+  "item.minecraft.lingering_potion.effect.long_darkness": "Осідальне зілля темряви",
+  "item.minecraft.tipped_arrow.effect.darkness": "Стріла темряви",
+  "item.minecraft.tipped_arrow.effect.long_darkness": "Стріла темряви"
 }

@@ -4,5 +4,14 @@
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Zdobienie zbroi „Wrzeszczydlło”",
   "trim_pattern.echoesofthedeep.shrieker": "Zdobienie zbroi „Wrzeszczydlło”",
 
-  "trim_material.echoesofthedeep.echo_shard": "Sculkowy materiał"
+  "trim_material.echoesofthedeep.echo_shard": "Sculkowy materiał",
+
+  "item.minecraft.potion.effect.darkness": "Mikstura mroku",
+  "item.minecraft.potion.effect.long_darkness": "Mikstura mroku",
+  "item.minecraft.splash_potion.effect.darkness": "Miotana mikstura mroku",
+  "item.minecraft.splash_potion.effect.long_darkness": "Miotana mikstura mroku",
+  "item.minecraft.lingering_potion.effect.darkness": "Trwała mikstura mroku",
+  "item.minecraft.lingering_potion.effect.long_darkness": "Trwała mikstura mroku",
+  "item.minecraft.tipped_arrow.effect.darkness": "Strzała mroku",
+  "item.minecraft.tipped_arrow.effect.long_darkness": "Strzała mroku"
 }

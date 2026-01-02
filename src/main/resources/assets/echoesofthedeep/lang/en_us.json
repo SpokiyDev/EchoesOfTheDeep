@@ -4,5 +4,15 @@
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Shrieker Armor Trim",
   "trim_pattern.echoesofthedeep.shrieker": "Shrieker Armor Trim",
 
-  "trim_material.echoesofthedeep.echo_shard": "Sculk Material"
+  "trim_material.echoesofthedeep.echo_shard": "Sculk Material",
+
+  "item.minecraft.potion.effect.darkness": "Potion of Darkness",
+  "item.minecraft.potion.effect.long_darkness": "Potion of Darkness",
+  "item.minecraft.splash_potion.effect.darkness": "Splash Potion of Darkness",
+  "item.minecraft.splash_potion.effect.long_darkness": "Splash Potion of Darkness",
+  "item.minecraft.lingering_potion.effect.darkness": "Lingering Potion of Darkness",
+  "item.minecraft.lingering_potion.effect.long_darkness": "Lingering Potion of Darkness",
+  "item.minecraft.tipped_arrow.effect.darkness": "Arrow of Darkness",
+  "item.minecraft.tipped_arrow.effect.long_darkness": "Arrow of Darkness"
+
 }
