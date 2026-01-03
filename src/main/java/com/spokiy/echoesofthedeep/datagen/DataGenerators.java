@@ -2,7 +2,6 @@ package com.spokiy.echoesofthedeep.datagen;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import com.spokiy.echoesofthedeep.datagen.loot.EDBlockTagProvider;
-import com.spokiy.echoesofthedeep.item.EDCreativeModeTabs;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

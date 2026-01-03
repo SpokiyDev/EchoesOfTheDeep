@@ -6,6 +6,15 @@
 
   "trim_material.echoesofthedeep.echo_shard": "Sculkowy materiał",
 
+  "item.minecraft.potion.effect.blindness": "Mikstura oślepienia",
+  "item.minecraft.potion.effect.long_blindness": "Mikstura oślepienia",
+  "item.minecraft.splash_potion.effect.blindness": "Miotana mikstura oślepienia",
+  "item.minecraft.splash_potion.effect.long_blindness": "Miotana mikstura oślepienia",
+  "item.minecraft.lingering_potion.effect.blindness": "Trwała mikstura oślepienia",
+  "item.minecraft.lingering_potion.effect.long_blindness": "Trwała mikstura oślepienia",
+  "item.minecraft.tipped_arrow.effect.blindness": "Strzała oślepienia",
+  "item.minecraft.tipped_arrow.effect.long_blindness": "Strzała oślepienia",
+
   "item.minecraft.potion.effect.darkness": "Mikstura mroku",
   "item.minecraft.potion.effect.long_darkness": "Mikstura mroku",
   "item.minecraft.splash_potion.effect.darkness": "Miotana mikstura mroku",

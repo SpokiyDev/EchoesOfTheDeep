@@ -1,0 +1,31 @@
+{
+  "parent": "echoesofthedeep:echoesofthedeep/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:potion",
+      "nbt": "{Potion:\"minecraft:darkness\"}"
+    },
+    "title": {
+      "translate": "advancements.echoesofthedeep.darkness_and_blindness_in_deep_dark.title"
+    },
+    "description": {
+      "translate": "advancements.echoesofthedeep.darkness_and_blindness_in_deep_dark.desc"
+    }
+  },
+  "criteria": {
+    "darkness_and_blindness_in_deep_dark": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "minecraft:blindness": {},
+          "minecraft:darkness": {}
+        },
+        "player": {
+          "location": {
+            "biome": "minecraft:deep_dark"
+          }
+        }
+      }
+    }
+  }
+}

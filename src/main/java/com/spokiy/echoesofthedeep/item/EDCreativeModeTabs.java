@@ -14,12 +14,25 @@ public class EDCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EchoesOfTheDeep.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> ECHOES_OF_THE_DEEP_ITEMS_TAB = CREATIVE_MODE_TABS.register("echoes_of_the_deep_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.SCULK_SHRIEKER))
+    public static final RegistryObject<CreativeModeTab> ECHOES_OF_THE_DEEP_ITEMS_TAB = CREATIVE_MODE_TABS.register("echoesofthedeep_creative_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(EDItems.SHRIEKER_SMITHING_TEMPLATE.get()))
                     .title(Component.translatable("creativetab.echoesofthedeep.echoes_of_the_deep"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        // Vanilla
+                        output.accept(Items.ECHO_SHARD);
+                        output.accept(Items.SCULK);
+                        output.accept(Items.SCULK_VEIN);
+                        output.accept(Items.SCULK_CATALYST);
+                        output.accept(Items.SCULK_SHRIEKER);
+                        output.accept(Items.SCULK_SENSOR);
                         // Item list
+                        output.accept(Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE);
+                        output.accept(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE);
                         output.accept(EDItems.SHRIEKER_SMITHING_TEMPLATE.get());
+                        // Music disc
+                        output.accept(Items.RECOVERY_COMPASS);
+                        output.accept(Items.MUSIC_DISC_5);
+                        output.accept(Items.DISC_FRAGMENT_5);
 
                     }).build());
 

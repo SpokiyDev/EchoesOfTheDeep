@@ -1,10 +1,22 @@
 {
-  "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
+  "creativetab.echoesofthedeep.echoes_of_the_deep": "Deep Dark",
+
+  "filled_map.ancient_city": "Deep Dark Explorer Map",
 
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Shrieker Armor Trim",
   "trim_pattern.echoesofthedeep.shrieker": "Shrieker Armor Trim",
 
   "trim_material.echoesofthedeep.echo_shard": "Sculk Material",
+
+
+  "item.minecraft.potion.effect.blindness": "Potion of Blindness",
+  "item.minecraft.potion.effect.long_blindness": "Potion of Blindness",
+  "item.minecraft.splash_potion.effect.blindness": "Splash Potion of Blindness",
+  "item.minecraft.splash_potion.effect.long_blindness": "Splash Potion of Blindness",
+  "item.minecraft.lingering_potion.effect.blindness": "Lingering Potion of Blindness",
+  "item.minecraft.lingering_potion.effect.long_blindness": "Lingering Potion of Blindness",
+  "item.minecraft.tipped_arrow.effect.blindness": "Arrow of Blindness",
+  "item.minecraft.tipped_arrow.effect.long_blindness": "Arrow of Blindness",
 
   "item.minecraft.potion.effect.darkness": "Potion of Darkness",
   "item.minecraft.potion.effect.long_darkness": "Potion of Darkness",
@@ -13,6 +25,18 @@
   "item.minecraft.lingering_potion.effect.darkness": "Lingering Potion of Darkness",
   "item.minecraft.lingering_potion.effect.long_darkness": "Lingering Potion of Darkness",
   "item.minecraft.tipped_arrow.effect.darkness": "Arrow of Darkness",
-  "item.minecraft.tipped_arrow.effect.long_darkness": "Arrow of Darkness"
+  "item.minecraft.tipped_arrow.effect.long_darkness": "Arrow of Darkness",
 
+
+  "advancements.echoesofthedeep.root.title": "Echoes of the Deep",
+  "advancements.echoesofthedeep.root.desc": "Find an ancient city deep underground",
+  "advancements.echoesofthedeep.get_ward_armor_trim_smithing_template.title": "Ward",
+  "advancements.echoesofthedeep.get_ward_armor_trim_smithing_template.desc": "Obtain Ward Armor Trim",
+  "advancements.echoesofthedeep.get_silence_armor_trim_smithing_template.title": "Silence",
+  "advancements.echoesofthedeep.get_silence_armor_trim_smithing_template.desc": "Obtain Silence Armor Trim",
+  "advancements.echoesofthedeep.get_shrieker_armor_trim_smithing_template.title": "Shrieker",
+  "advancements.echoesofthedeep.get_shrieker_armor_trim_smithing_template.desc": "Obtain Shrieker Armor Trim",
+
+  "advancements.echoesofthedeep.darkness_and_blindness_in_deep_dark.title": "Deeper and Darker",
+  "advancements.echoesofthedeep.darkness_and_blindness_in_deep_dark.desc": "Have the effects of darkness and blindness applied at the same time while being in the deep dark biome"
 }

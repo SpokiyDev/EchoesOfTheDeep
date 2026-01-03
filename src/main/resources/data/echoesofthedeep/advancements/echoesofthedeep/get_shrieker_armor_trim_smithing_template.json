@@ -1,0 +1,28 @@
+{
+  "parent": "echoesofthedeep:echoesofthedeep/get_silence_armor_trim_smithing_template",
+  "display": {
+    "icon": {
+      "item": "echoesofthedeep:shrieker_armor_trim_smithing_template"
+    },
+    "title": {
+      "translate": "advancements.echoesofthedeep.get_shrieker_armor_trim_smithing_template.title"
+    },
+    "description": {
+      "translate": "advancements.echoesofthedeep.get_shrieker_armor_trim_smithing_template.desc"
+    }
+  },
+  "criteria": {
+    "getItem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echoesofthedeep:shrieker_armor_trim_smithing_template"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

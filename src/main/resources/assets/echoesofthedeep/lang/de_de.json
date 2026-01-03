@@ -6,6 +6,15 @@
 
   "trim_material.echoesofthedeep.echo_shard": "Echoscherbe",
 
+  "item.minecraft.potion.effect.blindness": "Trank der Blindheit",
+  "item.minecraft.potion.effect.long_blindness": "Trank der Blindheit",
+  "item.minecraft.splash_potion.effect.blindness": "Wurftrank der Blindheit",
+  "item.minecraft.splash_potion.effect.long_blindness": "Wurftrank der Blindheit",
+  "item.minecraft.lingering_potion.effect.blindness": "Verweiltrank der Blindheit",
+  "item.minecraft.lingering_potion.effect.long_blindness": "Verweiltrank der Blindheit",
+  "item.minecraft.tipped_arrow.effect.blindness": "Pfeil der Blindheit",
+  "item.minecraft.tipped_arrow.effect.long_blindness": "Pfeil der Blindheit",
+
   "item.minecraft.potion.effect.darkness": "Trank der Dunkelheit",
   "item.minecraft.potion.effect.long_darkness": "Trank der Dunkelheit",
   "item.minecraft.splash_potion.effect.darkness": "Wurftrank der Dunkelheit",

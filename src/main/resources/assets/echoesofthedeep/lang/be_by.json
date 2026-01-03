@@ -6,6 +6,15 @@
 
   "trim_material.echoesofthedeep.echo_shard": "Матэрыял — Скалк",
 
+  "item.minecraft.potion.effect.blindness": "Зелле слепаты",
+  "item.minecraft.potion.effect.long_blindness": "Зелле слепаты",
+  "item.minecraft.splash_potion.effect.blindness": "Выбухное зелле слепаты",
+  "item.minecraft.splash_potion.effect.long_blindness": "Выбухное зелле слепаты",
+  "item.minecraft.lingering_potion.effect.blindness": "Трывалае зелле слепаты",
+  "item.minecraft.lingering_potion.effect.long_blindness": "Трывалае зелле слепаты",
+  "item.minecraft.tipped_arrow.effect.blindness": "Страла слепаты",
+  "item.minecraft.tipped_arrow.effect.long_blindness": "Страла слепаты",
+
   "item.minecraft.potion.effect.darkness": "Зелле цемры",
   "item.minecraft.potion.effect.long_darkness": "Зелле цемры",
   "item.minecraft.splash_potion.effect.darkness": "Выбухное зелле цемры",

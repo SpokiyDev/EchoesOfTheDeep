@@ -1,0 +1,28 @@
+{
+  "parent": "echoesofthedeep:echoesofthedeep/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:ward_armor_trim_smithing_template"
+    },
+    "title": {
+      "translate": "advancements.echoesofthedeep.get_ward_armor_trim_smithing_template.title"
+    },
+    "description": {
+      "translate": "advancements.echoesofthedeep.get_ward_armor_trim_smithing_template.desc"
+    }
+  },
+  "criteria": {
+    "getItem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:ward_armor_trim_smithing_template"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

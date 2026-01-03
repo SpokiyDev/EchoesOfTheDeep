@@ -1,0 +1,27 @@
+{
+  "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
+
+  "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Arnamient «Viskun»",
+  "trim_pattern.echoesofthedeep.shrieker": "Arnamient «Viskun»",
+
+  "trim_material.echoesofthedeep.echo_shard": "Materyjał — Sculk",
+
+  "item.minecraft.potion.effect.blindness": "Zielle slepaty",
+  "item.minecraft.potion.effect.long_blindness": "Zielle slepaty",
+  "item.minecraft.splash_potion.effect.blindness": "Vybuchnoje zielle slepaty",
+  "item.minecraft.splash_potion.effect.long_blindness": "Vybuchnoje zielle slepaty",
+  "item.minecraft.lingering_potion.effect.blindness": "Tryvałaje zielle slepaty",
+  "item.minecraft.lingering_potion.effect.long_blindness": "Tryvałaje zielle slepaty",
+  "item.minecraft.tipped_arrow.effect.blindness": "Strała slepaty",
+  "item.minecraft.tipped_arrow.effect.long_blindness": "Strała slepaty",
+
+  "item.minecraft.potion.effect.darkness": "Zielle ciemry",
+  "item.minecraft.potion.effect.long_darkness": "Zielle ciemry",
+  "item.minecraft.splash_potion.effect.darkness": "Vybuchnoje zielle ciemry",
+  "item.minecraft.splash_potion.effect.long_darkness": "Vybuchnoje zielle ciemry",
+  "item.minecraft.lingering_potion.effect.darkness": "Tryvałaje zielle ciemry",
+  "item.minecraft.lingering_potion.effect.long_darkness": "Tryvałaje zielle ciemry",
+  "item.minecraft.tipped_arrow.effect.darkness": "Strała ciemry",
+  "item.minecraft.tipped_arrow.effect.long_darkness": "Strała ciemry"
+
+}

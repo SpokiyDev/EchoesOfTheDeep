@@ -20,6 +20,8 @@ public class EDPotions {
 
     public static final RegistryObject<Potion> DARKNESS = POTIONS.register("darkness", () -> new Potion(new MobEffectInstance(MobEffects.DARKNESS, 3600)));
     public static final RegistryObject<Potion> LONG_DARKNESS = POTIONS.register("long_darkness", () -> new Potion(new MobEffectInstance(MobEffects.DARKNESS, 9600)));
+//    public static final RegistryObject<Potion> BLINDNESS = POTIONS.register("blindness", () -> new Potion(new MobEffectInstance(MobEffects.BLINDNESS, 3600)));
+//    public static final RegistryObject<Potion> LONG_BLINDNESS = POTIONS.register("long_blindness", () -> new Potion(new MobEffectInstance(MobEffects.BLINDNESS, 9600)));
 
     public static ItemStack createPotion(RegistryObject<Potion> potion){
         return  PotionUtils.setPotion(new ItemStack(Items.POTION), potion.get());
@@ -29,7 +31,11 @@ public class EDPotions {
     }
 
     public static void registerPotionsRecipes() {
-        BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(Potions.AWKWARD)), Ingredient.of(Items.ECHO_SHARD), createPotion(DARKNESS)));
+        // Blindness
+//        BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(Potions.AWKWARD)), Ingredient.of(Items.ECHO_SHARD), createPotion(BLINDNESS)));
+//        BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(BLINDNESS)), Ingredient.of(Items.REDSTONE), createPotion(LONG_BLINDNESS)));
+        // Darkness
+        BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(Potions.AWKWARD)), Ingredient.of(Items.FERMENTED_SPIDER_EYE), createPotion(DARKNESS)));
         BrewingRecipeRegistry.addRecipe(new ProperBrewingRecipe(Ingredient.of(createPotion(DARKNESS)), Ingredient.of(Items.REDSTONE), createPotion(LONG_DARKNESS)));
     }
     public static void register(IEventBus eventBus) {

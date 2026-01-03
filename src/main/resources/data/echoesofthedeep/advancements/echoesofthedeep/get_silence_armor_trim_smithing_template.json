@@ -1,0 +1,28 @@
+{
+  "parent": "echoesofthedeep:echoesofthedeep/get_ward_armor_trim_smithing_template",
+  "display": {
+    "icon": {
+      "item": "minecraft:silence_armor_trim_smithing_template"
+    },
+    "title": {
+      "translate": "advancements.echoesofthedeep.get_silencearmor_trim_smithing_template.title"
+    },
+    "description": {
+      "translate": "advancements.echoesofthedeep.get_silence_armor_trim_smithing_template.desc"
+    }
+  },
+  "criteria": {
+    "getItem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:silence_armor_trim_smithing_template"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
