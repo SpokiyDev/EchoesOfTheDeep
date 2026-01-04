@@ -1,6 +1,10 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
+  "filled_map.ancient_city": "Mapa badacza mrocznych głębin",
+
+  "block.echoesofthedeep.sculk_guardian": "Sculkowy strażnik",
+
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Zdobienie zbroi „Wrzeszczydlło”",
   "trim_pattern.echoesofthedeep.shrieker": "Zdobienie zbroi „Wrzeszczydlło”",
 
@@ -22,5 +26,17 @@
   "item.minecraft.lingering_potion.effect.darkness": "Trwała mikstura mroku",
   "item.minecraft.lingering_potion.effect.long_darkness": "Trwała mikstura mroku",
   "item.minecraft.tipped_arrow.effect.darkness": "Strzała mroku",
-  "item.minecraft.tipped_arrow.effect.long_darkness": "Strzała mroku"
+  "item.minecraft.tipped_arrow.effect.long_darkness": "Strzała mroku",
+
+
+  "advancements.echoesofthedeep.root.title": "Echoes of the Deep",
+  "advancements.echoesofthedeep.root.desc": "Find an ancient city deep underground",
+  "advancements.echoesofthedeep.get_ward_armor_trim_smithing_template.title": "Ward",
+  "advancements.echoesofthedeep.get_ward_armor_trim_smithing_template.desc": "Obtain Ward Armor Trim",
+  "advancements.echoesofthedeep.get_silence_armor_trim_smithing_template.title": "Silence",
+  "advancements.echoesofthedeep.get_silence_armor_trim_smithing_template.desc": "Obtain Silence Armor Trim",
+  "advancements.echoesofthedeep.get_shrieker_armor_trim_smithing_template.title": "Shrieker",
+  "advancements.echoesofthedeep.get_shrieker_armor_trim_smithing_template.desc": "Obtain Shrieker Armor Trim",
+  "advancements.echoesofthedeep.darkness_and_blindness_in_deep_dark.title": "Deeper and Darker",
+  "advancements.echoesofthedeep.darkness_and_blindness_in_deep_dark.desc": "Have the effects of darkness and blindness applied at the same time while being in the deep dark biome"
 }

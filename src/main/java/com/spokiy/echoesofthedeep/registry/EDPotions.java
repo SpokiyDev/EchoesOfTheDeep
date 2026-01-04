@@ -1,6 +1,7 @@
-package com.spokiy.echoesofthedeep.item.alchemy;
+package com.spokiy.echoesofthedeep.registry;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
+import com.spokiy.echoesofthedeep.item.alchemy.ProperBrewingRecipe;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemStack;

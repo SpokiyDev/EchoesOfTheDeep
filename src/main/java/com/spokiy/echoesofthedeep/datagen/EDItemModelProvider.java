@@ -1,7 +1,7 @@
 package com.spokiy.echoesofthedeep.datagen;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
-import com.spokiy.echoesofthedeep.item.EDItems;
+import com.spokiy.echoesofthedeep.registry.EDItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -10,12 +10,9 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.LinkedHashMap;
@@ -35,14 +32,16 @@ public class EDItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
 
-
     public EDItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, EchoesOfTheDeep.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void registerModels() {
+
+        // Templates
         basicItem(EDItems.SHRIEKER_SMITHING_TEMPLATE.get());
+
     }
 
     // Shoutout to El_Redstoniano for making this

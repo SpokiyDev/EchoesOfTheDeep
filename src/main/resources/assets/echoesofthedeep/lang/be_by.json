@@ -1,6 +1,10 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
+  "filled_map.ancient_city": "Карта даследчыка цёмных глыбінь",
+
+  "block.echoesofthedeep.sculk_guardian": "Скалкавы вартавы",
+
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Арнамент «Віскун»",
   "trim_pattern.echoesofthedeep.shrieker": "Арнамент «Віскун»",
 
@@ -22,5 +26,16 @@
   "item.minecraft.lingering_potion.effect.darkness": "Трывалае зелле цемры",
   "item.minecraft.lingering_potion.effect.long_darkness": "Трывалае зелле цемры",
   "item.minecraft.tipped_arrow.effect.darkness": "Страла цемры",
-  "item.minecraft.tipped_arrow.effect.long_darkness": "Страла цемры"
+  "item.minecraft.tipped_arrow.effect.long_darkness": "Страла цемры",
+
+  "advancements.echoesofthedeep.root.title": "Echoes of the Deep",
+  "advancements.echoesofthedeep.root.desc": "Find an ancient city deep underground",
+  "advancements.echoesofthedeep.get_ward_armor_trim_smithing_template.title": "Ward",
+  "advancements.echoesofthedeep.get_ward_armor_trim_smithing_template.desc": "Obtain Ward Armor Trim",
+  "advancements.echoesofthedeep.get_silence_armor_trim_smithing_template.title": "Silence",
+  "advancements.echoesofthedeep.get_silence_armor_trim_smithing_template.desc": "Obtain Silence Armor Trim",
+  "advancements.echoesofthedeep.get_shrieker_armor_trim_smithing_template.title": "Shrieker",
+  "advancements.echoesofthedeep.get_shrieker_armor_trim_smithing_template.desc": "Obtain Shrieker Armor Trim",
+  "advancements.echoesofthedeep.darkness_and_blindness_in_deep_dark.title": "Deeper and Darker",
+  "advancements.echoesofthedeep.darkness_and_blindness_in_deep_dark.desc": "Have the effects of darkness and blindness applied at the same time while being in the deep dark biome"
 }

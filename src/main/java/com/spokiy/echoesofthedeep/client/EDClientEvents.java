@@ -6,7 +6,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MapItem;
@@ -27,7 +26,7 @@ public class EDClientEvents {
     private static final ResourceLocation ANCIENT_CITY_ICON =
             ResourceLocation.fromNamespaceAndPath("echoesofthedeep", "textures/map/ancient_city.png");
 
-    @SubscribeEvent
+//    @SubscribeEvent
     public static void onRenderLevelStage(RenderLevelStageEvent event) {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player == null || mc.level == null) return;

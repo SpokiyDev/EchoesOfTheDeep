@@ -1,4 +1,4 @@
-package com.spokiy.echoesofthedeep.item;
+package com.spokiy.echoesofthedeep.registry;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import net.minecraft.resources.ResourceLocation;

@@ -1,4 +1,4 @@
-package com.spokiy.echoesofthedeep.item;
+package com.spokiy.echoesofthedeep.registry;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import net.minecraft.core.registries.Registries;
@@ -18,13 +18,15 @@ public class EDCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(EDItems.SHRIEKER_SMITHING_TEMPLATE.get()))
                     .title(Component.translatable("creativetab.echoesofthedeep.echoes_of_the_deep"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        // Vanilla
+                        // Materials
                         output.accept(Items.ECHO_SHARD);
+                        // Blocks
                         output.accept(Items.SCULK);
                         output.accept(Items.SCULK_VEIN);
                         output.accept(Items.SCULK_CATALYST);
                         output.accept(Items.SCULK_SHRIEKER);
                         output.accept(Items.SCULK_SENSOR);
+                        output.accept(EDBlocks.SCULK_GUARDIAN.get());
                         // Item list
                         output.accept(Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE);
                         output.accept(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE);

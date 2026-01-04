@@ -1,7 +1,7 @@
 package com.spokiy.echoesofthedeep.trim;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
-import com.spokiy.echoesofthedeep.item.EDItems;
+import com.spokiy.echoesofthedeep.registry.EDItems;
 import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;

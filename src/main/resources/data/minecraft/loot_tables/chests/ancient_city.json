@@ -441,22 +441,22 @@
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 58
+          "weight": 72
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:ward_armor_trim_smithing_template",
-          "weight": 5
+          "weight": 4
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:silence_armor_trim_smithing_template",
-          "weight": 3
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "echoesofthedeep:shrieker_armor_trim_smithing_template",
-          "weight": 4
+          "weight": 2
         }
       ],
       "rolls": 1.0

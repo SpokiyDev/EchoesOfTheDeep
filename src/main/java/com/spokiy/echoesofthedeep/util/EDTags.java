@@ -31,7 +31,7 @@ public class EDTags {
         public static final TagKey<Structure> ON_ANCIENT_CITY_EXPLORER_MAPS = createConfiguredStructureFeatureTag("on_ancient_city_explorer_maps");
 
         private static TagKey<Structure> createConfiguredStructureFeatureTag(String name) {
-            return TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath("echoesofthedeep", name));
+            return TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(EchoesOfTheDeep.MOD_ID, name));
         }
     }
 

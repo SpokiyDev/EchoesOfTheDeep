@@ -1,4 +1,4 @@
-package com.spokiy.echoesofthedeep.particle;
+package com.spokiy.echoesofthedeep.registry;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import net.minecraft.core.particles.ParticleType;
@@ -8,7 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class EDParticles {
+public class EDParticleRegistry {
     public static final DeferredRegister<ParticleType<?>> PARTICLES =
             DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, EchoesOfTheDeep.MOD_ID);
 
