@@ -1,7 +1,6 @@
 package com.spokiy.echoesofthedeep.datagen;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
-import com.spokiy.echoesofthedeep.registry.EDBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;

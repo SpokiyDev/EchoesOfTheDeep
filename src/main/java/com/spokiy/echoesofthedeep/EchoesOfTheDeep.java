@@ -1,12 +1,12 @@
 package com.spokiy.echoesofthedeep;
 
 import com.mojang.logging.LogUtils;
-import com.spokiy.echoesofthedeep.registry.*;
 import com.spokiy.echoesofthedeep.config.EDConfigs;
-import com.spokiy.echoesofthedeep.enchantment.EDEnchantments;
-import com.spokiy.echoesofthedeep.event.EDEvents;
-import com.spokiy.echoesofthedeep.loot.EDLootModifiers;
-import com.spokiy.echoesofthedeep.particle.ColoredFireworkParticle;
+import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
+import com.spokiy.echoesofthedeep.server.event.EDEvents;
+import com.spokiy.echoesofthedeep.server.loot.EDLootModifiers;
+import com.spokiy.echoesofthedeep.server.particle.ColoredFireworkParticle;
+import com.spokiy.echoesofthedeep.server.registry.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,13 +36,14 @@ public class EchoesOfTheDeep
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        EDCreativeModeTabs.register(modEventBus);                                               // Creative Tabs
         EDItems.register(modEventBus);                                                          // Items
         EDBlocks.register(modEventBus);                                                         // Blocks
         EDBlockEntities.register(modEventBus);                                                  // Block Entities
         EDPotions.register(modEventBus);                                                        // Potions
-        EDCreativeModeTabs.register(modEventBus);                                               // Creative Tabs
         EDEnchantments.register(modEventBus);                                                   // Enchantments
         EDParticleRegistry.register(modEventBus);                                               // Particles
+        EDFeatures.register(modEventBus);                                                       // Features
         EDLootModifiers.register(modEventBus);                                                  // Loot
 
         MinecraftForge.EVENT_BUS.register(new EDEvents());

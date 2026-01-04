@@ -1,15 +1,8 @@
 package com.spokiy.echoesofthedeep.datagen.loot;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
-import com.spokiy.echoesofthedeep.loot.AddItemModifier;
-import com.spokiy.echoesofthedeep.loot.AddLootTableModifier;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
-import net.minecraftforge.common.loot.LootTableIdCondition;
 
 public class GlobalLootModifiersProvider extends GlobalLootModifierProvider {
     public GlobalLootModifiersProvider(PackOutput output) {

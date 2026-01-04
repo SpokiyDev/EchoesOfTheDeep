@@ -1,7 +1,7 @@
 package com.spokiy.echoesofthedeep.datagen;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
-import com.spokiy.echoesofthedeep.registry.EDItems;
+import com.spokiy.echoesofthedeep.server.registry.EDItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -78,6 +78,7 @@ public class EDItemModelProvider extends ItemModelProvider {
                         .texture("layer1", trimResLoc);
 
                 // Non-trimmed armorItem file (normal variant)
+                assert itemRegistryObject.getId() != null;
                 this.withExistingParent(itemRegistryObject.getId().getPath(),
                                 mcLoc("item/generated"))
                         .override()

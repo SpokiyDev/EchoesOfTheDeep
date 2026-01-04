@@ -1,3 +1,3 @@
 {
-  "parent": "minecraft:block/sculk_shrieker"
+  "parent": "echoesofthedeep:block/sculk_guardian"
 }
