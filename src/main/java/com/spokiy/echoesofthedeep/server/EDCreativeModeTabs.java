@@ -1,6 +1,8 @@
-package com.spokiy.echoesofthedeep.server.registry;
+package com.spokiy.echoesofthedeep.server;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
+import com.spokiy.echoesofthedeep.server.block.EDBlocks;
+import com.spokiy.echoesofthedeep.server.item.EDItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -32,6 +34,7 @@ public class EDCreativeModeTabs {
                         output.accept(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE);
                         output.accept(EDItems.SHRIEKER_SMITHING_TEMPLATE.get());
                         // Music disc
+                        output.accept(EDItems.ECHO_SCYTHE.get());
                         output.accept(Items.RECOVERY_COMPASS);
                         output.accept(Items.MUSIC_DISC_5);
                         output.accept(Items.DISC_FRAGMENT_5);

@@ -1,9 +1,12 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Deep Dark",
 
-  "filled_map.ancient_city": "Deep Dark Explorer Map",
+  "item.echoesofthedeep.echo_scythe": "Echo Scythe",
+  "item.echoesofthedeep.echo_scythe.desc": "Echo Scythe",
 
   "block.echoesofthedeep.sculk_guardian": "Sculk Guardian",
+
+  "filled_map.ancient_city": "Deep Dark Explorer Map",
 
 
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Shrieker Armor Trim",
@@ -11,6 +14,13 @@
 
   "trim_material.echoesofthedeep.echo_shard": "Sculk Material",
 
+
+  "enchantment.echoesofthedeep.reaper": "Reaper",
+  "enchantment.echoesofthedeep.reaper.desc": "Increases the damage of sweeping attacks up.",
+  "enchantment.echoesofthedeep.echo_resonance": "Echo Resonance",
+  "enchantment.echoesofthedeep.echo_resonance.desc": "Deal increased damage to a target for each enemy nearby.",
+
+  "effect.echoesofthedeep.echo_collapse": "Echo Collapse",
 
   "item.minecraft.potion.effect.blindness": "Potion of Blindness",
   "item.minecraft.potion.effect.long_blindness": "Potion of Blindness",

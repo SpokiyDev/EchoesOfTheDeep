@@ -1,4 +1,4 @@
-package com.spokiy.echoesofthedeep.server.registry;
+package com.spokiy.echoesofthedeep.server.item;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import com.spokiy.echoesofthedeep.server.item.alchemy.ProperBrewingRecipe;

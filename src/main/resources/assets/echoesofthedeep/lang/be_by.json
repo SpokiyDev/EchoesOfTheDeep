@@ -1,14 +1,19 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
-  "filled_map.ancient_city": "Карта даследчыка цёмных глыбінь",
+  "item.echoesofthedeep.echo_scythe": "Каса рэхa",
 
   "block.echoesofthedeep.sculk_guardian": "Скалкавы вартавы",
+
+  "filled_map.ancient_city": "Карта даследчыка цёмных глыбінь",
 
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Арнамент «Віскун»",
   "trim_pattern.echoesofthedeep.shrieker": "Арнамент «Віскун»",
 
-  "trim_material.echoesofthedeep.echo_shard": "Матэрыял — Скалк",
+  "trim_material.echoesofthedeep.echo_shard": "Матэрыял — Асколак рэхa",
+
+
+  "effect.echoesofthedeep.echo_collapse": "Відлуння руйнування",
 
   "item.minecraft.potion.effect.blindness": "Зелле слепаты",
   "item.minecraft.potion.effect.long_blindness": "Зелле слепаты",

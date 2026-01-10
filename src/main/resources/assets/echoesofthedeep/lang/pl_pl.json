@@ -1,9 +1,11 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
-  "filled_map.ancient_city": "Mapa badacza mrocznych głębin",
+  "item.echoesofthedeep.echo_scythe": "Echo-kosa",
 
   "block.echoesofthedeep.sculk_guardian": "Sculkowy strażnik",
+
+  "filled_map.ancient_city": "Mapa badacza mrocznych głębin",
 
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Zdobienie zbroi „Wrzeszczydlło”",
   "trim_pattern.echoesofthedeep.shrieker": "Zdobienie zbroi „Wrzeszczydlło”",

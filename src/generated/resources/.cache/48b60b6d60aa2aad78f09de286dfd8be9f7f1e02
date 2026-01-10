@@ -1,3 +1,6 @@
-// 1.20.1	2026-01-02T05:29:51.443546721	Tags for minecraft:item mod id echoesofthedeep
+// 1.20.1	2026-01-07T03:11:11.936044703	Tags for minecraft:item mod id echoesofthedeep
+cea2190907fc813bf4df366f11660246e02c2f6c data/echoesofthedeep/tags/items/echo_scythe.json
+cea2190907fc813bf4df366f11660246e02c2f6c data/minecraft/tags/items/hoes.json
+cea2190907fc813bf4df366f11660246e02c2f6c data/minecraft/tags/items/tools.json
 3c136ad71b9cc1a962b06ab779e09369ea8e25a9 data/minecraft/tags/items/trim_materials.json
 1f0b54568b04f17605f7a53022dbec7816ccc9af data/minecraft/tags/items/trim_templates.json

@@ -1,8 +1,8 @@
-package com.spokiy.echoesofthedeep.client.event;
+package com.spokiy.echoesofthedeep.client;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import com.spokiy.echoesofthedeep.client.render.blockentity.SculkGuardianBlockEntityRenderer;
-import com.spokiy.echoesofthedeep.server.registry.EDBlockEntities;
+import com.spokiy.echoesofthedeep.server.block.EDBlockEntities;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;

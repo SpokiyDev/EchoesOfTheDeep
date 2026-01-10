@@ -1,9 +1,11 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
-  "filled_map.ancient_city": "Karta dasledčyka ciomnych hłybiń",
+  "item.echoesofthedeep.echo_scythe": "Echa-kasa",
 
   "block.echoesofthedeep.sculk_guardian": "Sculkavy vartavy",
+
+  "filled_map.ancient_city": "Karta dasledčyka ciomnych hłybiń",
 
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Arnamient «Viskun»",
   "trim_pattern.echoesofthedeep.shrieker": "Arnamient «Viskun»",

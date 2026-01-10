@@ -1,14 +1,24 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
-  "filled_map.ancient_city": "Entdeckerkarte des Tiefen Dunkels",
+  "item.echoesofthedeep.echo_scythe": "Echosense",
+  "item.echoesofthedeep.echo_scythe.desc": "Echo Scythe",
 
   "block.echoesofthedeep.sculk_guardian": "Sculk-Wächter",
+
+  "filled_map.ancient_city": "Entdeckerkarte des Tiefen Dunkels",
 
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Kreischer-Rüstungsbesatz",
   "trim_pattern.echoesofthedeep.shrieker": "Kreischer-Rüstungsbesatz",
 
   "trim_material.echoesofthedeep.echo_shard": "Echoscherbe",
+
+
+  "enchantment.echoesofthedeep.reaper": "Reaper",
+  "enchantment.echoesofthedeep.reaper.desc": "Erhöht den Schaden von ausgedehnten Angriffen.",
+  "enchantment.echoesofthedeep.echo_resonance": "Echo Resonance",
+  "enchantment.echoesofthedeep.echo_resonance.desc": "Deal increased damage to a target for each enemy nearby.",
+
 
   "item.minecraft.potion.effect.blindness": "Trank der Blindheit",
   "item.minecraft.potion.effect.long_blindness": "Trank der Blindheit",

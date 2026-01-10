@@ -1,4 +1,4 @@
-package com.spokiy.echoesofthedeep.server.registry;
+package com.spokiy.echoesofthedeep.server.block;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import com.spokiy.echoesofthedeep.server.block.entity.SculkGuardianBlockEntity;

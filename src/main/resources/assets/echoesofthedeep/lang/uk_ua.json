@@ -1,14 +1,25 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
-  "filled_map.ancient_city": "Мапа дослідника темних глибин",
+  "item.echoesofthedeep.echo_scythe": "Коса відлуння",
+  "item.echoesofthedeep.echo_scythe.desc": "Echo Scythe",
 
   "block.echoesofthedeep.sculk_guardian": "Скалковий вартовий",
+
+  "filled_map.ancient_city": "Мапа дослідника темних глибин",
 
   "item.echoesofthedeep.shrieker_armor_trim_smithing_template": "Орнамент обладунків «Крикун»",
   "trim_pattern.echoesofthedeep.shrieker": "Орнамент обладунків «Крикун»",
 
   "trim_material.echoesofthedeep.echo_shard": "Скалковий матеріал",
+
+
+  "enchantment.echoesofthedeep.reaper": "Жнець",
+  "enchantment.echoesofthedeep.reaper.desc": "Increases the damage of sweeping attacks up.",
+  "enchantment.echoesofthedeep.echo_resonance": "Резонанс",
+  "enchantment.echoesofthedeep.echo_resonance.desc": "Deal increased damage to a target for each enemy nearby.",
+
+  "effect.echoesofthedeep.echo_collapse": "Відлуння розрухи",
 
   "item.minecraft.potion.effect.blindness": "Зілля сліпоти",
   "item.minecraft.potion.effect.long_blindness": "Зілля сліпоти",

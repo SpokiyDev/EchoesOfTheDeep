@@ -1,7 +1,7 @@
 package com.spokiy.echoesofthedeep.server.worldgen.features;
 
 import com.mojang.serialization.Codec;
-import com.spokiy.echoesofthedeep.server.registry.EDBlocks;
+import com.spokiy.echoesofthedeep.server.block.EDBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;

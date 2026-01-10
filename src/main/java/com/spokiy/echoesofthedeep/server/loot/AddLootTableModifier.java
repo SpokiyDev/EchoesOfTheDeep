@@ -17,9 +17,6 @@ import java.util.function.Supplier;
 
 import static net.minecraft.world.level.storage.loot.LootTable.createStackSplitter;
 
-/**
- * Credits to Commoble for this implementation!
- */
 public class AddLootTableModifier extends LootModifier {
     public static final Supplier<Codec<AddLootTableModifier>> CODEC = Suppliers.memoize(() ->
             RecordCodecBuilder.create(inst -> codecStart(inst)

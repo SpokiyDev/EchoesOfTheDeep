@@ -1,6 +1,5 @@
-// 1.20.1	2026-01-04T23:28:35.562646753	Registries
+// 1.20.1	2026-01-07T03:11:11.937111707	Registries
 a1a83467ca23104f291f400811806e7b7e111989 data/echoesofthedeep/forge/biome_modifier/new_sculk_patch_deep_dark.json
-f73339da8234ad81846c3681f0d8e23bc61702d5 data/echoesofthedeep/forge/biome_modifier/remove_feature/sculk_patch_deep_dark.json
 6cd380b2cef9d9573029393dd3f66dae2538a575 data/echoesofthedeep/trim_material/echo_shard.json
 7711db6017eec51e32ff387650abfb880d964491 data/echoesofthedeep/trim_pattern/shrieker.json
 4cad40b3ff88ef198b53d0c9f1c45d2ea0f5f886 data/echoesofthedeep/worldgen/configured_feature/sculk_patch_deep_dark.json

@@ -1,7 +1,8 @@
 package com.spokiy.echoesofthedeep.datagen;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
-import com.spokiy.echoesofthedeep.server.registry.EDItems;
+import com.spokiy.echoesofthedeep.server.item.EDItems;
+import com.spokiy.echoesofthedeep.server.util.EDTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -28,5 +29,17 @@ public class EDItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.TRIM_TEMPLATES)
                 .add(EDItems.SHRIEKER_SMITHING_TEMPLATE.get());
+
+
+        tag(ItemTags.HOES)
+                .add(EDItems.ECHO_SCYTHE.get());
+
+        tag(ItemTags.TOOLS)
+                .add(EDItems.ECHO_SCYTHE.get());
+
+        // Custom tags
+        tag(EDTags.Items.ECHO_SCYTHE)
+                .add(EDItems.ECHO_SCYTHE.get());
+
     }
 }

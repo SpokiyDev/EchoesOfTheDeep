@@ -6,15 +6,15 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
 import net.minecraft.core.particles.SimpleParticleType;
 
-public class ColoredFireworkParticle extends TextureSheetParticle {
+public class EchoScytheSweepAttack extends TextureSheetParticle {
 
     private final float red;
     private final float green;
     private final float blue;
 
-    public ColoredFireworkParticle(ClientLevel world, double x, double y, double z,
-                                   double xd, double yd, double zd,
-                                   float red, float green, float blue) {
+    public EchoScytheSweepAttack(ClientLevel world, double x, double y, double z,
+                                 double xd, double yd, double zd,
+                                 float red, float green, float blue) {
         super(world, x, y, z);
         this.xd = xd;
         this.yd = yd;
@@ -61,7 +61,7 @@ public class ColoredFireworkParticle extends TextureSheetParticle {
             float g = world.random.nextFloat();
             float b = world.random.nextFloat();
 
-            ColoredFireworkParticle particle = new ColoredFireworkParticle(world, x, y, z, xd, yd, zd, r, g, b);
+            EchoScytheSweepAttack particle = new EchoScytheSweepAttack(world, x, y, z, xd, yd, zd, r, g, b);
             particle.pickSprite(sprites);
             return particle;
         }

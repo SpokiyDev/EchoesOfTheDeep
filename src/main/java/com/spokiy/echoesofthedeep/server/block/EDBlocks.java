@@ -1,7 +1,7 @@
-package com.spokiy.echoesofthedeep.server.registry;
+package com.spokiy.echoesofthedeep.server.block;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
-import com.spokiy.echoesofthedeep.server.block.SculkGuardian;
+import com.spokiy.echoesofthedeep.server.item.EDItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

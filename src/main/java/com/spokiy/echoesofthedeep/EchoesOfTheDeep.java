@@ -2,11 +2,18 @@ package com.spokiy.echoesofthedeep;
 
 import com.mojang.logging.LogUtils;
 import com.spokiy.echoesofthedeep.config.EDConfigs;
+import com.spokiy.echoesofthedeep.server.EDCreativeModeTabs;
+import com.spokiy.echoesofthedeep.server.block.EDBlockEntities;
+import com.spokiy.echoesofthedeep.server.block.EDBlocks;
+import com.spokiy.echoesofthedeep.server.item.EDItems;
+import com.spokiy.echoesofthedeep.server.item.EDPotions;
+import com.spokiy.echoesofthedeep.server.mob_effect.EDMobEffects;
+import com.spokiy.echoesofthedeep.server.particle.EDParticles;
 import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
 import com.spokiy.echoesofthedeep.server.event.EDEvents;
 import com.spokiy.echoesofthedeep.server.loot.EDLootModifiers;
-import com.spokiy.echoesofthedeep.server.particle.ColoredFireworkParticle;
-import com.spokiy.echoesofthedeep.server.registry.*;
+import com.spokiy.echoesofthedeep.server.particle.EchoScytheSweepAttack;
+import com.spokiy.echoesofthedeep.server.worldgen.EDFeatures;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -40,9 +47,10 @@ public class EchoesOfTheDeep
         EDItems.register(modEventBus);                                                          // Items
         EDBlocks.register(modEventBus);                                                         // Blocks
         EDBlockEntities.register(modEventBus);                                                  // Block Entities
+        EDMobEffects.register(modEventBus);                                                     // Mob Effects
         EDPotions.register(modEventBus);                                                        // Potions
         EDEnchantments.register(modEventBus);                                                   // Enchantments
-        EDParticleRegistry.register(modEventBus);                                               // Particles
+        EDParticles.register(modEventBus);                                               // Particles
         EDFeatures.register(modEventBus);                                                       // Features
         EDLootModifiers.register(modEventBus);                                                  // Loot
 
@@ -79,7 +87,7 @@ public class EchoesOfTheDeep
 
         @SubscribeEvent
         public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
-            event.registerSpriteSet(EDParticleRegistry.COLORED_FIREWORK_PARTICLES.get(), ColoredFireworkParticle.Provider::new);
+            event.registerSpriteSet(EDParticles.ECHO_SCYTHE_SWEEP_ATTACK.get(), EchoScytheSweepAttack.Provider::new);
         }
     }
 }
