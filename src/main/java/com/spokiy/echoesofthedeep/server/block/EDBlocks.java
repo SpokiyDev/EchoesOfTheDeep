@@ -6,6 +6,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -16,8 +17,12 @@ import java.util.function.Supplier;
 public class EDBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, EchoesOfTheDeep.MOD_ID);
 
+    public static final RegistryObject<Block> SCULK_SPROUTS = registerBlock("sculk_sprouts",
+            () -> new SculkSprouts(BlockBehaviour.Properties.copy(Blocks.NETHER_SPROUTS)));
     public static final RegistryObject<Block> SCULK_GUARDIAN = registerBlock("sculk_guardian",
-            () -> new SculkGuardian(Block.Properties.copy(Blocks.SCULK_SHRIEKER).lightLevel((level) -> 3) ));
+            () -> new SculkGuardian(BlockBehaviour.Properties.copy(Blocks.SCULK_SHRIEKER).lightLevel((level) -> 3) ));
+    public static final RegistryObject<Block> CALIBRATED_SCULK_SHRIEKER = registerBlock("calibrated_sculk_shrieker",
+            () -> new CalibratedSculkShrieker(BlockBehaviour.Properties.copy(Blocks.SCULK_SHRIEKER)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

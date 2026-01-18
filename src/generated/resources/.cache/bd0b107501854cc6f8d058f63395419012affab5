@@ -1,2 +1,7 @@
-// 1.20.1	2026-01-04T05:40:07.073987335	Tags for minecraft:block mod id echoesofthedeep
+// 1.20.1	2026-01-12T14:51:27.353699251	Tags for minecraft:block mod id echoesofthedeep
+8d85ee6797d5b3db15e45089c2b65b0e9cd6e777 data/minecraft/tags/blocks/combination_step_sound_blocks.json
+8d85ee6797d5b3db15e45089c2b65b0e9cd6e777 data/minecraft/tags/blocks/enchantment_power_transmitter.json
 5cfe5ad44bd05b006b5390946fb0283ce031aa06 data/minecraft/tags/blocks/mineable/hoe.json
+8d85ee6797d5b3db15e45089c2b65b0e9cd6e777 data/minecraft/tags/blocks/replaceable.json
+8d85ee6797d5b3db15e45089c2b65b0e9cd6e777 data/minecraft/tags/blocks/replaceable_by_trees.json
+8d85ee6797d5b3db15e45089c2b65b0e9cd6e777 data/minecraft/tags/blocks/sword_efficient.json

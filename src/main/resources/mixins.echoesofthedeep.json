@@ -4,9 +4,15 @@
   "refmap": "mixins.echoesofthedeep.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "PlayerMixin"
+    "PlayerMixin",
+    "SculkBlockMixin",
+    "SculkPatchFeatureMixin",
+    "SculkShriekerBlockEntityMixin",
+    "SculkShriekerBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "client": [
+  ]
 }

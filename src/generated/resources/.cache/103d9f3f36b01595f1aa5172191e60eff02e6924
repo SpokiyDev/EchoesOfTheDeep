@@ -1,6 +1,7 @@
-// 1.20.1	2026-01-07T03:11:11.937111707	Registries
-a1a83467ca23104f291f400811806e7b7e111989 data/echoesofthedeep/forge/biome_modifier/new_sculk_patch_deep_dark.json
+// 1.20.1	2026-01-12T14:57:22.962334178	Registries
+19947cfd93939a17d9ecff55f695a5c2f7596bfd data/echoesofthedeep/forge/biome_modifier/add_feature/sculk_sprouts.json
 6cd380b2cef9d9573029393dd3f66dae2538a575 data/echoesofthedeep/trim_material/echo_shard.json
 7711db6017eec51e32ff387650abfb880d964491 data/echoesofthedeep/trim_pattern/shrieker.json
-4cad40b3ff88ef198b53d0c9f1c45d2ea0f5f886 data/echoesofthedeep/worldgen/configured_feature/sculk_patch_deep_dark.json
-cfc93abed830eb0fc306fd7cd83a345772a3ef1a data/echoesofthedeep/worldgen/placed_feature/new_sculk_patch_ancient_city.json
+4e5247ab7a95303f612e6a11e9f5a6d06753716e data/echoesofthedeep/worldgen/configured_feature/sculk_sprouts.json
+eeb057c0ebf585efe382061281facb4bc237848b data/echoesofthedeep/worldgen/configured_feature/sculk_sprouts_bonemeal.json
+86f5a6ff588b6660e61b86ed9d632652661ec0dd data/echoesofthedeep/worldgen/placed_feature/sculk_sprouts.json

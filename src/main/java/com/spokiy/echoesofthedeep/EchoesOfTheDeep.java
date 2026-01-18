@@ -1,19 +1,27 @@
 package com.spokiy.echoesofthedeep;
 
 import com.mojang.logging.LogUtils;
+import com.spokiy.echoesofthedeep.client.EDClientEvents;
+import com.spokiy.echoesofthedeep.client.item.EDItemProperties;
+import com.spokiy.echoesofthedeep.client.render.entity.CalibratedSculkShriekerShriekEntityRenderer;
 import com.spokiy.echoesofthedeep.config.EDConfigs;
 import com.spokiy.echoesofthedeep.server.EDCreativeModeTabs;
 import com.spokiy.echoesofthedeep.server.block.EDBlockEntities;
 import com.spokiy.echoesofthedeep.server.block.EDBlocks;
+import com.spokiy.echoesofthedeep.server.entity.EDEntities;
 import com.spokiy.echoesofthedeep.server.item.EDItems;
 import com.spokiy.echoesofthedeep.server.item.EDPotions;
 import com.spokiy.echoesofthedeep.server.mob_effect.EDMobEffects;
+import com.spokiy.echoesofthedeep.server.particle.CalibratedSculkShriekerShriekParticle;
 import com.spokiy.echoesofthedeep.server.particle.EDParticles;
 import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
 import com.spokiy.echoesofthedeep.server.event.EDEvents;
 import com.spokiy.echoesofthedeep.server.loot.EDLootModifiers;
 import com.spokiy.echoesofthedeep.server.particle.EchoScytheSweepAttack;
-import com.spokiy.echoesofthedeep.server.worldgen.EDFeatures;
+import com.spokiy.echoesofthedeep.server.recipe.EDRecipes;
+import com.spokiy.echoesofthedeep.server.worldgen.feature.EDFeatures;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -47,10 +55,12 @@ public class EchoesOfTheDeep
         EDItems.register(modEventBus);                                                          // Items
         EDBlocks.register(modEventBus);                                                         // Blocks
         EDBlockEntities.register(modEventBus);                                                  // Block Entities
+        EDRecipes.register(modEventBus);                                                        // Recipes
+        EDEntities.register(modEventBus);                                                       // Entities
         EDMobEffects.register(modEventBus);                                                     // Mob Effects
         EDPotions.register(modEventBus);                                                        // Potions
         EDEnchantments.register(modEventBus);                                                   // Enchantments
-        EDParticles.register(modEventBus);                                               // Particles
+        EDParticles.register(modEventBus);                                                      // Particles
         EDFeatures.register(modEventBus);                                                       // Features
         EDLootModifiers.register(modEventBus);                                                  // Loot
 
@@ -66,8 +76,11 @@ public class EchoesOfTheDeep
 
 
     private void setup(final FMLCommonSetupEvent event) {
-
         EDPotions.registerPotionsRecipes();
+
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(EDBlocks.SCULK_SPROUTS.get().asItem(), 0.5F);
+        });
 
     }
 
@@ -83,11 +96,21 @@ public class EchoesOfTheDeep
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            MinecraftForge.EVENT_BUS.register(new EDClientEvents());
+            EDItemProperties.registerItemProperties(event);
+
+            EntityRenderers.register(
+                    EDEntities.CALIBRATED_SCULK_SHRIEKER_SHRIEK.get(),
+                    CalibratedSculkShriekerShriekEntityRenderer::new
+            );
+
         }
 
         @SubscribeEvent
         public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(EDParticles.ECHO_SCYTHE_SWEEP_ATTACK.get(), EchoScytheSweepAttack.Provider::new);
+            event.registerSpriteSet(EDParticles.CALIBRATED_SCULK_SHRIEKER_SHRIEK_PARTICLE.get(), CalibratedSculkShriekerShriekParticle.Provider::new);
+
         }
     }
 }

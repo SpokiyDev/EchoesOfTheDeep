@@ -1,5 +1,5 @@
 {
-  "parent": "echoesofthedeep:echoesofthedeep/root",
+  "parent": "echoesofthedeep:echoesofthedeep/ancient_city",
   "display": {
     "icon": {
       "item": "minecraft:ward_armor_trim_smithing_template"

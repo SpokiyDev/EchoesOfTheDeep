@@ -18,7 +18,16 @@ public class EDRecipeProvider extends RecipeProvider implements IConditionBuilde
 
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
-        // Shrieker armor trim
+        // Crafting Table
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EDItems.WARNING_CLOCK.get())
+                .pattern("SSS")
+                .pattern("SCS")
+                .pattern("SSS")
+                .define('C', Items.CLOCK)
+                .define('S', Items.ECHO_SHARD)
+                .unlockedBy("has_echo_shard", has(Items.ECHO_SHARD)).save(consumer);
+
+        // Armor Trims
         trimSmithing(consumer, EDItems.SHRIEKER_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(EchoesOfTheDeep.MOD_ID, "shrieker"));
         copySmithingTemplate(consumer, EDItems.SHRIEKER_SMITHING_TEMPLATE.get(), Items.SCULK);
 

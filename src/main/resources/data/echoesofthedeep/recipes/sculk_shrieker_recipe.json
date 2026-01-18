@@ -1,0 +1,10 @@
+{
+  "type": "echoesofthedeep:sculk_shrieker",
+  "ingredients": [
+    { "item": "minecraft:diamond", "count": 2 }
+  ],
+  "output": {
+    "item": "minecraft:echo_shard",
+    "count": 1
+  }
+}

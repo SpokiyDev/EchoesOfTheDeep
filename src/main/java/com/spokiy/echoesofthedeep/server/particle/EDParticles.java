@@ -14,6 +14,8 @@ public class EDParticles {
 
     public static final RegistryObject<SimpleParticleType> ECHO_SCYTHE_SWEEP_ATTACK =
             PARTICLES.register("echo_scythe_sweep_attack", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> CALIBRATED_SCULK_SHRIEKER_SHRIEK_PARTICLE =
+            PARTICLES.register("calibrated_sculk_shrieker_shriek_particle", () -> new SimpleParticleType(true));
 
     public static void register(IEventBus eventBus) {
         PARTICLES.register(eventBus);

@@ -4,6 +4,7 @@
   "item.echoesofthedeep.echo_scythe": "Echo Scythe",
   "item.echoesofthedeep.echo_scythe.desc": "Echo Scythe",
 
+  "block.echoesofthedeep.sculk_sprouts": "Sculk Sprouts",
   "block.echoesofthedeep.sculk_guardian": "Sculk Guardian",
 
   "filled_map.ancient_city": "Deep Dark Explorer Map",
@@ -17,8 +18,8 @@
 
   "enchantment.echoesofthedeep.reaper": "Reaper",
   "enchantment.echoesofthedeep.reaper.desc": "Increases the damage of sweeping attacks up.",
-  "enchantment.echoesofthedeep.echo_resonance": "Echo Resonance",
-  "enchantment.echoesofthedeep.echo_resonance.desc": "Deal increased damage to a target for each enemy nearby.",
+  "enchantment.echoesofthedeep.resonance": "Echo Resonance",
+  "enchantment.echoesofthedeep.resonance.desc": "Deal increased damage to a target for each enemy nearby.",
 
   "effect.echoesofthedeep.echo_collapse": "Echo Collapse",
 

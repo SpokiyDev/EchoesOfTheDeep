@@ -1,0 +1,28 @@
+{
+  "parent": "echoesofthedeep:echoesofthedeep/ancient_city",
+  "display": {
+    "icon": {
+      "item": "echoesofthedeep:echo_scythe"
+    },
+    "title": {
+      "translate": "advancements.echoesofthedeep.get_echo_scythe.title"
+    },
+    "description": {
+      "translate": "advancements.echoesofthedeep.get_echo_scythe.desc"
+    }
+  },
+  "criteria": {
+    "getItem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echoesofthedeep:echo_scythe"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ package com.spokiy.echoesofthedeep.server.event;
 import com.spokiy.echoesofthedeep.server.util.EDTags;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.TagKey;
@@ -39,12 +40,15 @@ public class EDVillagerTrades {
         if (!(trader.level() instanceof ServerLevel serverlevel)) {
             return null;
         } else {
-            BlockPos blockpos = serverlevel.findNearestMapStructure(destination, trader.blockPosition(), 100, true);
-            if (blockpos != null) {
-                ItemStack mapStack = MapItem.create(serverlevel, blockpos.getX(), blockpos.getZ(), (byte)2, true, true);
+            BlockPos pos = serverlevel.findNearestMapStructure(destination, trader.blockPosition(), 100, true);
+            if (pos != null) {
+                ItemStack mapStack = MapItem.create(serverlevel, pos.getX(), pos.getZ(), (byte)2, true, true);
                 MapItem.renderBiomePreviewMap(serverlevel, mapStack);
-                MapItemSavedData.addTargetDecoration(mapStack, blockpos, "+", destinationType);
+                MapItemSavedData.addTargetDecoration(mapStack, pos, "+", destinationType);
                 mapStack.setHoverName(Component.translatable(displayName));
+
+                CompoundTag tag = mapStack.getTagElement("display");
+                if (tag != null) tag.putInt("MapColor", 215900);
 
                 return new MerchantOffer(new ItemStack(Items.EMERALD, emeraldCost), new ItemStack(Items.COMPASS), mapStack, maxUses, villagerXp, 0.2F);
             } else {

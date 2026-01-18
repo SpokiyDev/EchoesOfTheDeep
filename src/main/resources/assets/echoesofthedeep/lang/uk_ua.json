@@ -4,6 +4,7 @@
   "item.echoesofthedeep.echo_scythe": "Коса відлуння",
   "item.echoesofthedeep.echo_scythe.desc": "Echo Scythe",
 
+  "block.echoesofthedeep.sculk_sprouts": "Скалкові паростки",
   "block.echoesofthedeep.sculk_guardian": "Скалковий вартовий",
 
   "filled_map.ancient_city": "Мапа дослідника темних глибин",
@@ -16,8 +17,8 @@
 
   "enchantment.echoesofthedeep.reaper": "Жнець",
   "enchantment.echoesofthedeep.reaper.desc": "Increases the damage of sweeping attacks up.",
-  "enchantment.echoesofthedeep.echo_resonance": "Резонанс",
-  "enchantment.echoesofthedeep.echo_resonance.desc": "Deal increased damage to a target for each enemy nearby.",
+  "enchantment.echoesofthedeep.resonance": "Резонанс",
+  "enchantment.echoesofthedeep.resonance.desc": "Deal increased damage to a target for each enemy nearby.",
 
   "effect.echoesofthedeep.echo_collapse": "Відлуння розрухи",
 

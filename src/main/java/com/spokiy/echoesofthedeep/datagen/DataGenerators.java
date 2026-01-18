@@ -1,6 +1,10 @@
 package com.spokiy.echoesofthedeep.datagen;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
+import com.spokiy.echoesofthedeep.datagen.block.EDBlockStateProvider;
+import com.spokiy.echoesofthedeep.datagen.block.EDBlockTagProvider;
+import com.spokiy.echoesofthedeep.datagen.item.EDItemModelProvider;
+import com.spokiy.echoesofthedeep.datagen.item.EDItemTagProvider;
 import com.spokiy.echoesofthedeep.datagen.loot.EDBlockLootProvider;
 import com.spokiy.echoesofthedeep.datagen.loot.GlobalLootModifiersProvider;
 import net.minecraft.core.HolderLookup;

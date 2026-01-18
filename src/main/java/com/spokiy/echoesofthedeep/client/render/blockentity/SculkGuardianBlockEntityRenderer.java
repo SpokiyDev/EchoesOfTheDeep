@@ -2,28 +2,20 @@ package com.spokiy.echoesofthedeep.client.render.blockentity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Axis;
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import com.spokiy.echoesofthedeep.server.block.SculkGuardian;
 import com.spokiy.echoesofthedeep.server.block.entity.SculkGuardianBlockEntity;
-import net.minecraft.client.Camera;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.util.Mth;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
-import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
 public class SculkGuardianBlockEntityRenderer implements BlockEntityRenderer<SculkGuardianBlockEntity> {
@@ -38,7 +30,8 @@ public class SculkGuardianBlockEntityRenderer implements BlockEntityRenderer<Scu
     @Override
     public void render(
             @NotNull SculkGuardianBlockEntity entity,
-            float partialTicks, PoseStack poseStack,
+            float partialTicks,
+            @NotNull PoseStack poseStack,
             @NotNull MultiBufferSource buffer,
             int light,
             int packedOverlay

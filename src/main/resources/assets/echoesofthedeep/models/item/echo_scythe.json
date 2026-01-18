@@ -2,17 +2,20 @@
   "parent": "minecraft:item/handheld",
   "loader": "forge:separate_transforms",
   "base": {
-    "parent": "echoesofthedeep:item/echo_scythe_in_hand"
+    "parent": "echoesofthedeep:item/echo_scythe_model"
+  },
+  "textures": {
+    "particle": "echoesofthedeep:item/echo_scythe"
   },
   "perspectives": {
     "gui": {
-      "parent": "echoesofthedeep:item/echo_scythe_item"
+      "parent": "echoesofthedeep:item/echo_scythe_inventory"
     },
     "ground": {
-      "parent": "echoesofthedeep:item/echo_scythe_item"
+      "parent": "echoesofthedeep:item/echo_scythe_inventory"
     },
     "fixed": {
-      "parent": "echoesofthedeep:item/echo_scythe_item"
+      "parent": "echoesofthedeep:item/echo_scythe_inventory"
     }
   }
 }

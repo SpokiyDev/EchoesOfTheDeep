@@ -1,51 +1,49 @@
 package com.spokiy.echoesofthedeep.server.particle;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.Camera;
+import com.spokiy.echoesofthedeep.config.EDConfigs;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 
+@OnlyIn(Dist.CLIENT)
 public class EchoScytheSweepAttack extends TextureSheetParticle {
+    private final SpriteSet sprites;
 
-    private final float red;
-    private final float green;
-    private final float blue;
-
-    public EchoScytheSweepAttack(ClientLevel world, double x, double y, double z,
-                                 double xd, double yd, double zd,
-                                 float red, float green, float blue) {
-        super(world, x, y, z);
-        this.xd = xd;
-        this.yd = yd;
-        this.zd = zd;
-        this.quadSize = 0.2f + world.random.nextFloat() * 0.1f;
-        this.lifetime = 20 + world.random.nextInt(10); // тривалість частинки
-        this.red = red;
-        this.green = green;
-        this.blue = blue;
+    EchoScytheSweepAttack(ClientLevel level, double x, double y, double z, double quadSizeMultiplier, SpriteSet sprites) {
+        super(level, x, y, z, 0.0D, 0.0D, 0.0D);
+        this.sprites = sprites;
+        this.lifetime = 4;
+        float f = this.random.nextFloat() * 0.6F + 0.4F;
+        this.rCol = f;
+        this.gCol = f;
+        this.bCol = f;
+        this.quadSize = (float) ((1.0 - quadSizeMultiplier * 0.5) * EDConfigs.ECHO_SCYTHE_SWEEP_ATTACK_PARTICLE_SIZE_MULTIPLIER.get());
+        this.setSpriteFromAge(sprites);
     }
 
-    @Override
-    public void render(VertexConsumer buffer, Camera camera, float partialTicks) {
-        this.rCol = red;
-        this.gCol = green;
-        this.bCol = blue;
-        super.render(buffer, camera, partialTicks);
+    public int getLightColor(float partialTick) {
+        return 15728880;
     }
 
-    @Override
     public void tick() {
-        super.tick();
-        // трохи прискорення вниз, як у феєрверка
-        this.yd -= 0.01;
+        this.xo = this.x;
+        this.yo = this.y;
+        this.zo = this.z;
+        if (this.age++ >= this.lifetime) {
+            this.remove();
+        } else {
+            this.setSpriteFromAge(this.sprites);
+        }
     }
 
-    @Override
-    public ParticleRenderType getRenderType() {
-        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
+    public @NotNull ParticleRenderType getRenderType() {
+        return ParticleRenderType.PARTICLE_SHEET_LIT;
     }
 
+    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 
@@ -53,17 +51,8 @@ public class EchoScytheSweepAttack extends TextureSheetParticle {
             this.sprites = sprites;
         }
 
-        @Override
-        public Particle createParticle(SimpleParticleType type, ClientLevel world,
-                                       double x, double y, double z,
-                                       double xd, double yd, double zd) {
-            float r = world.random.nextFloat();
-            float g = world.random.nextFloat();
-            float b = world.random.nextFloat();
-
-            EchoScytheSweepAttack particle = new EchoScytheSweepAttack(world, x, y, z, xd, yd, zd, r, g, b);
-            particle.pickSprite(sprites);
-            return particle;
+        public Particle createParticle(@NotNull SimpleParticleType type, @NotNull ClientLevel level, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
+            return new EchoScytheSweepAttack(level, x, y, z, xSpeed, this.sprites);
         }
     }
 }

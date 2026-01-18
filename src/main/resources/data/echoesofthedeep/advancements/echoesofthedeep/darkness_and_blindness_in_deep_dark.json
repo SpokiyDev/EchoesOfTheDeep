@@ -3,7 +3,7 @@
   "display": {
     "icon": {
       "item": "minecraft:potion",
-      "nbt": "{Potion:\"minecraft:darkness\"}"
+      "nbt": "{Potion:\"echoesofthedeep:darkness\"}"
     },
     "title": {
       "translate": "advancements.echoesofthedeep.darkness_and_blindness_in_deep_dark.title"

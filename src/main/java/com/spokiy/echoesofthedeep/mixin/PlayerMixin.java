@@ -4,8 +4,8 @@ import com.spokiy.echoesofthedeep.config.EDConfigs;
 import com.spokiy.echoesofthedeep.server.item.EchoScytheItem;
 import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
 import com.spokiy.echoesofthedeep.server.mob_effect.EDMobEffects;
+import com.spokiy.echoesofthedeep.server.particle.EDParticles;
 import com.spokiy.echoesofthedeep.server.util.Utils;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
@@ -33,10 +33,7 @@ public abstract class PlayerMixin extends LivingEntity {
 
     @Inject(
             method = "attack(Lnet/minecraft/world/entity/Entity;)V",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;getSweepingDamageRatio(Lnet/minecraft/world/entity/LivingEntity;)F"
-            ),
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;getSweepingDamageRatio(Lnet/minecraft/world/entity/LivingEntity;)F"),
             cancellable = true
     )
     private void onSweepAttack(Entity target, CallbackInfo ci) {
@@ -47,7 +44,7 @@ public abstract class PlayerMixin extends LivingEntity {
 
         // Echo Resonance Effect
         if (target instanceof LivingEntity livingEntity) {
-            int i = EnchantmentHelper.getTagEnchantmentLevel(EDEnchantments.ECHO_RESONANCE.get(), stack);
+            int i = EnchantmentHelper.getTagEnchantmentLevel(EDEnchantments.RESONANCE.get(), stack);
             if (i > 0) {
                 livingEntity.addEffect(new MobEffectInstance(EDMobEffects.ECHO_COLLAPSE.get(), 90, i - 1));
                 livingEntity.getPersistentData().putUUID("echoesofthedeep.echo_collapse.effect.source", player.getUUID());
@@ -75,16 +72,16 @@ public abstract class PlayerMixin extends LivingEntity {
         }
 
         this.level().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.PLAYER_ATTACK_SWEEP, this.getSoundSource(), 1.0F, 1.0F);
-        echoesOfTheDeep_1_20_x$echoScytheSweepAttack();
+        echoesOfTheDeep$echoScytheSweepAttack();
         ci.cancel();
     }
 
     @Unique
-    public void echoesOfTheDeep_1_20_x$echoScytheSweepAttack() {
+    public void echoesOfTheDeep$echoScytheSweepAttack() {
         double d0 = -Mth.sin(this.getYRot() * ((float)Math.PI / 180F));
         double d1 = Mth.cos(this.getYRot() * ((float)Math.PI / 180F));
         if (this.level() instanceof ServerLevel) {
-            ((ServerLevel)this.level()).sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.5D), this.getZ() + d1, 0, d0, 0.0D, d1, 0.0D);
+            ((ServerLevel)this.level()).sendParticles(EDParticles.ECHO_SCYTHE_SWEEP_ATTACK.get(), this.getX() + d0, this.getY(0.5D), this.getZ() + d1, 0, d0, 0.0D, d1, 0.0D);
         }
 
     }

@@ -1,0 +1,28 @@
+{
+  "parent": "echoesofthedeep:echoesofthedeep/ancient_city",
+  "display": {
+    "icon": {
+      "item": "minecraft:music_disc_5"
+    },
+    "title": {
+      "translate": "advancements.echoesofthedeep.get_music_disc_5.title"
+    },
+    "description": {
+      "translate": "advancements.echoesofthedeep.get_music_disc_5.desc"
+    }
+  },
+  "criteria": {
+    "getItem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:music_disc_5"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -17,8 +17,8 @@ public class EDEnchantments {
 
     public static final RegistryObject<Enchantment> REAPER =
             ENCHANTMENTS.register("reaper", () -> new ReaperEnchantment(EquipmentSlot.MAINHAND));
-    public static final RegistryObject<Enchantment> ECHO_RESONANCE =
-            ENCHANTMENTS.register("echo_resonance", () -> new EchoResonanceEnchantment(EquipmentSlot.MAINHAND));
+    public static final RegistryObject<Enchantment> RESONANCE =
+            ENCHANTMENTS.register("resonance", () -> new ResonanceEnchantment(EquipmentSlot.MAINHAND));
 
     public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);

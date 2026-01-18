@@ -25,10 +25,13 @@ public class EDCreativeModeTabs {
                         // Blocks
                         output.accept(Items.SCULK);
                         output.accept(Items.SCULK_VEIN);
+                        output.accept(EDBlocks.SCULK_SPROUTS.get());
                         output.accept(Items.SCULK_CATALYST);
                         output.accept(Items.SCULK_SHRIEKER);
                         output.accept(Items.SCULK_SENSOR);
                         output.accept(EDBlocks.SCULK_GUARDIAN.get());
+                        output.accept(Items.CALIBRATED_SCULK_SENSOR);
+                        output.accept(EDBlocks.CALIBRATED_SCULK_SHRIEKER.get());
                         // Item list
                         output.accept(Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE);
                         output.accept(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE);
@@ -36,6 +39,7 @@ public class EDCreativeModeTabs {
                         // Music disc
                         output.accept(EDItems.ECHO_SCYTHE.get());
                         output.accept(Items.RECOVERY_COMPASS);
+                        output.accept(EDItems.WARNING_CLOCK.get());
                         output.accept(Items.MUSIC_DISC_5);
                         output.accept(Items.DISC_FRAGMENT_5);
 

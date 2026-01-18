@@ -4,17 +4,17 @@
       "item": "minecraft:sculk_shrieker"
     },
     "title": {
-      "translate": "advancements.echoesofthedeep.root.title"
+      "translate": "biome.minecraft.deep_dark"
     },
     "description": {
       "translate": "advancements.echoesofthedeep.root.desc"
     },
-    "background": "echoesofthedeep:textures/advancement_background.png",
-    "show_toast": true
+    "background": "echoesofthedeep:textures/advancement_background.png"
   },
 
   "criteria": {
-    "entered_ancient_city": {
+    "enter": {
+      "trigger": "minecraft:location",
       "conditions": {
         "player": [
           {
@@ -22,13 +22,12 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "minecraft:ancient_city"
+                "biome": "minecraft:deep_dark"
               }
             }
           }
         ]
-      },
-      "trigger": "minecraft:location"
+      }
     }
   }
 }

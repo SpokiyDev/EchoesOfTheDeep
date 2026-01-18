@@ -2,22 +2,24 @@ package com.spokiy.echoesofthedeep.server.util;
 
 import com.spokiy.echoesofthedeep.config.EDConfigs;
 import com.spokiy.echoesofthedeep.server.item.EchoScytheItem;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import org.spongepowered.asm.mixin.Unique;
 
 public class Utils {
     public static AABB newSweepHitBox(ItemStack stack, Player player, Entity target) {
@@ -63,4 +65,25 @@ public class Utils {
         }
         target.push(direction.x() * d0, direction.y() * d1, direction.z() * d0);
     }
+    public static void spawnEatParticles(Level level, Vec3 pos, ItemStack item, int number) {
+        RandomSource random = level.getRandom();
+
+        for (int i = 0; i < number; i++) {
+
+            double offsetX = (random.nextDouble() - 0.5D) * 0.7D;
+            double offsetZ = (random.nextDouble() - 0.5D) * 0.7D;
+            double offsetY = random.nextDouble() * 0.25D + 0.2D;
+
+            ItemParticleOption particle = new ItemParticleOption(ParticleTypes.ITEM, item);
+
+            if (level instanceof ServerLevel serverLevel) {
+                serverLevel.sendParticles(particle,
+                        pos.x + offsetX, pos.y + offsetY, pos.z + offsetZ,
+                        1,
+                        0, 0, 0,
+                        0.065D);
+            }
+        }
+    }
+
 }

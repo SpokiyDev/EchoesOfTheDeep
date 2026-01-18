@@ -4,6 +4,7 @@ import com.spokiy.echoesofthedeep.server.block.EDBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 
 import java.util.HashSet;
@@ -19,6 +20,7 @@ public class EDBlockLootProvider extends BlockLootSubProvider
 
     @Override
     protected void generate() {
+        this.add(EDBlocks.SCULK_SPROUTS.get(), BlockLootSubProvider::createShearsOnlyDrop);
         this.dropWhenSilkTouch(EDBlocks.SCULK_GUARDIAN.get());
 
     }

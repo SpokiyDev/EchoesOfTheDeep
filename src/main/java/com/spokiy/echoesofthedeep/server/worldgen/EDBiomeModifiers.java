@@ -1,13 +1,12 @@
 package com.spokiy.echoesofthedeep.server.worldgen;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
+import com.spokiy.echoesofthedeep.server.worldgen.placement.EDPlacedFeatures;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.biome.OverworldBiomes;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -22,20 +21,18 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class EDBiomeModifiers {
-    public static final ResourceKey<BiomeModifier> NEW_SCULK_PATCH_DEEP_DARK = registerKey("new_sculk_patch_deep_dark");
+    public static final String SCULK_SPROUTS = "sculk_sprouts";
 
     public static void bootstrap (BootstapContext<BiomeModifier> context) {
-        var placedFeature = context.lookup(Registries.PLACED_FEATURE);
-        var biomes = context.lookup(Registries.BIOME);
-
-//        removeFeature(context, "sculk_patch_deep_dark", Biomes.DEEP_DARK, GenerationStep.Decoration.UNDERGROUND_DECORATION);
-
-        context.register(NEW_SCULK_PATCH_DEEP_DARK, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.MINESHAFT_BLOCKING),
-                HolderSet.direct(placedFeature.getOrThrow(EDPlacedFeatures.NEW_SCULK_PATCH_DEEP_DARK)),
-                GenerationStep.Decoration.UNDERGROUND_DECORATION));
+        addFeature(context, SCULK_SPROUTS, Biomes.DEEP_DARK, GenerationStep.Decoration.VEGETAL_DECORATION, EDPlacedFeatures.SCULK_SPROUTS);
 
     }
+
+    @SafeVarargs
+    private static void addFeature(BootstapContext<BiomeModifier> context, String name, ResourceKey<Biome> biome, GenerationStep.Decoration step, ResourceKey<PlacedFeature>... features) {
+        register(context, "add_feature/" + name, () -> new ForgeBiomeModifiers.AddFeaturesBiomeModifier(HolderSet.direct(context.lookup(Registries.BIOME).getOrThrow(biome)), featureSet(context, features), step));
+    }
+
 
     @SafeVarargs
     private static void removeFeature(BootstapContext<BiomeModifier> context, String name, ResourceKey<Biome> biome, GenerationStep.Decoration step, ResourceKey<PlacedFeature>... features) {

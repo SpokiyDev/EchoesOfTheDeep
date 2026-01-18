@@ -15,8 +15,11 @@ public class EDItems {
     public static final RegistryObject<Item> SHRIEKER_SMITHING_TEMPLATE = ITEMS.register("shrieker_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(EchoesOfTheDeep.MOD_ID, "shrieker")));
 
+    public static final RegistryObject<Item> WARNING_CLOCK = ITEMS.register("warning_clock",
+            () -> new WarningClockItem());
+
     public static final RegistryObject<Item> ECHO_SCYTHE = ITEMS.register("echo_scythe",
-            () -> new EchoScytheItem(Tiers.NETHERITE, 7, -3.2F, (new Item.Properties()).rarity(Rarity.EPIC).durability(750)));
+            () -> new EchoScytheItem(Tiers.NETHERITE, 7, -3.2F));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

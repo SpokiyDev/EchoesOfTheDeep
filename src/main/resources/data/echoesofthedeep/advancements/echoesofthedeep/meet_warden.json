@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:adventure/avoid_vibration",
+  "display": {
+    "icon": {
+      "item": "minecraft:warden_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.echoesofthedeep.meet_warden.title"
+    },
+    "description": {
+      "translate": "advancements.echoesofthedeep.meet_warden.title"
+    }
+  },
+  "criteria": {
+    "killed": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:warden"
+        }
+      }
+    },
+    "killed_by": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:warden"
+        }
+      }
+    },
+    "interact": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:warden"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "killed",
+      "killed_by",
+      "interact"
+    ]
+  ]
+}

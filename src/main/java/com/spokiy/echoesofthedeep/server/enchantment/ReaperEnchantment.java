@@ -20,7 +20,7 @@ public class ReaperEnchantment extends Enchantment {
 
     @Override
     protected boolean checkCompatibility(Enchantment other) {
-        return other != EDEnchantments.ECHO_RESONANCE.get()
+        return other != EDEnchantments.RESONANCE.get()
                 && !(other instanceof DamageEnchantment)
                 && super.checkCompatibility(other);
     }
