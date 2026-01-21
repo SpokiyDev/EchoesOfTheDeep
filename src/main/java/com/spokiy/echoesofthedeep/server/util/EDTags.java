@@ -20,7 +20,7 @@ public class EDTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> ECHO_SCYTHE = createTag("echo_scythe");
+        public static final TagKey<Item> SOUL_SCYTHE = createTag("souly_scythe");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(EchoesOfTheDeep.MOD_ID, name));

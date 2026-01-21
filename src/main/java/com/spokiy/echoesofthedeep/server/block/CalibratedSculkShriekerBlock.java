@@ -1,10 +1,8 @@
 package com.spokiy.echoesofthedeep.server.block;
 
 import com.spokiy.echoesofthedeep.server.block.entity.CalibratedSculkShriekerShriekEntity;
-import com.spokiy.echoesofthedeep.server.entity.EDEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -26,14 +24,14 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
-public class CalibratedSculkShrieker extends DirectionalBlock implements SimpleWaterloggedBlock {
+public class CalibratedSculkShriekerBlock extends DirectionalBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     public static final BooleanProperty TRIGGERED = BlockStateProperties.TRIGGERED;
 
     protected static final VoxelShape COLLIDER = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
 
-    public CalibratedSculkShrieker(BlockBehaviour.Properties pProperties) {
+    public CalibratedSculkShriekerBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE).setValue(POWERED, Boolean.FALSE).setValue(TRIGGERED, Boolean.FALSE));
     }

@@ -1,5 +1,6 @@
 {
   "display": {
+    "announce_to_chat": false,
     "icon": {
       "item": "minecraft:sculk_shrieker"
     },

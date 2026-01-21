@@ -33,12 +33,12 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("deprecation")
-public class SculkGuardian extends BaseEntityBlock implements SimpleWaterloggedBlock {
+public class SculkGuardianBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty SHRIEKING = BlockStateProperties.SHRIEKING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
 
-    public SculkGuardian(BlockBehaviour.Properties pProperties) {
+    public SculkGuardianBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(SHRIEKING, Boolean.FALSE)

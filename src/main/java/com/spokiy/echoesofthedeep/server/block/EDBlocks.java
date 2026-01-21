@@ -18,11 +18,14 @@ public class EDBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, EchoesOfTheDeep.MOD_ID);
 
     public static final RegistryObject<Block> SCULK_SPROUTS = registerBlock("sculk_sprouts",
-            () -> new SculkSprouts(BlockBehaviour.Properties.copy(Blocks.NETHER_SPROUTS)));
+            () -> new SculkSproutsBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_SPROUTS)));
     public static final RegistryObject<Block> SCULK_GUARDIAN = registerBlock("sculk_guardian",
-            () -> new SculkGuardian(BlockBehaviour.Properties.copy(Blocks.SCULK_SHRIEKER).lightLevel((level) -> 3) ));
+            () -> new SculkGuardianBlock(BlockBehaviour.Properties.copy(Blocks.SCULK_SHRIEKER).lightLevel((level) -> 3) ));
     public static final RegistryObject<Block> CALIBRATED_SCULK_SHRIEKER = registerBlock("calibrated_sculk_shrieker",
-            () -> new CalibratedSculkShrieker(BlockBehaviour.Properties.copy(Blocks.SCULK_SHRIEKER)));
+            () -> new CalibratedSculkShriekerBlock(BlockBehaviour.Properties.copy(Blocks.SCULK_SHRIEKER)));
+
+    public static final RegistryObject<Block> WARDEN_HEAD = registerBlock("warden_head",
+            () -> new WardenHeadBlock(BlockBehaviour.Properties.copy(Blocks.SKELETON_SKULL)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

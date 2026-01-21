@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "echoesofthedeep:item/echo_scythe"
+    "layer0": "echoesofthedeep:item/soul_scythe"
   }
 }

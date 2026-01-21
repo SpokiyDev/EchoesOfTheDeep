@@ -1,6 +1,7 @@
 {
   "parent": "echoesofthedeep:echoesofthedeep/root",
   "display": {
+    "frame": "goal",
     "icon": {
       "item": "minecraft:deepslate_tiles"
     },

@@ -1,8 +1,10 @@
 package com.spokiy.echoesofthedeep.client;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
+import com.spokiy.echoesofthedeep.client.render.block.WardenHeadRenderer;
 import com.spokiy.echoesofthedeep.client.render.blockentity.SculkGuardianBlockEntityRenderer;
 import com.spokiy.echoesofthedeep.server.block.EDBlockEntities;
+import com.spokiy.echoesofthedeep.server.block.entity.WardenHeadBlockEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -102,5 +104,6 @@ public class EDClientEvents {
     @SubscribeEvent
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(EDBlockEntities.SCULK_GUARDIAN.get(), SculkGuardianBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(EDBlockEntities.WARDEN_HEAD.get(), WardenHeadRenderer::new);
     }
 }

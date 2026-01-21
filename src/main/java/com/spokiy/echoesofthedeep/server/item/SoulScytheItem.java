@@ -2,14 +2,11 @@ package com.spokiy.echoesofthedeep.server.item;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import com.spokiy.echoesofthedeep.config.EDConfigs;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.ExperienceOrb;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -18,7 +15,6 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
@@ -31,12 +27,12 @@ import java.util.Set;
 
 import static com.google.common.collect.ImmutableSet.of;
 
-public class EchoScytheItem extends DiggerItem implements Vanishable {
-    Set<ToolAction> ECHO_SCYTHE_SET = of( ToolActions.SWORD_SWEEP, ToolActions.HOE_DIG );
+public class SoulScytheItem extends DiggerItem implements Vanishable {
+    Set<ToolAction> SOUL_SCYTHE_SET = of( ToolActions.HOE_DIG );
 
     private final Multimap<Attribute, AttributeModifier> defaultModifiers;
 
-    public EchoScytheItem(Tier tier, float damage, float speed) {
+    public SoulScytheItem(Tier tier, float damage, float speed) {
         super(damage, speed, tier, BlockTags.MINEABLE_WITH_HOE,
                 new Item.Properties().rarity(Rarity.EPIC).durability(750));
 
@@ -56,25 +52,6 @@ public class EchoScytheItem extends DiggerItem implements Vanishable {
     }
 
     @Override
-    public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
-        Level level = target.level();
-        if (!level.isClientSide) {
-            if (target.getHealth() <= 0 && level.getGameRules().getBoolean(GameRules.RULE_DOMOBLOOT)) {
-                double x = target.getX();
-                double y = target.getY();
-                double z = target.getZ();
-
-                double experienceReward = target.getExperienceReward();
-                int bonusExperienceReward = (int) Math.ceil(EDConfigs.ECHO_SCYTHE_BONUS_EXPERIENCE_REWARD_MULTIPLIER.get() * experienceReward);
-                level.addFreshEntity(new ExperienceOrb(level, x, y, z, bonusExperienceReward));
-
-            }
-        }
-
-        return super.hurtEnemy(stack, target, attacker);
-    }
-
-    @Override
     public boolean isValidRepairItem(@NotNull ItemStack itemStack, @NotNull ItemStack itemStackMaterial) {
         return itemStackMaterial.is(Items.ECHO_SHARD);
     }
@@ -86,7 +63,7 @@ public class EchoScytheItem extends DiggerItem implements Vanishable {
 
     @Override
     public boolean canPerformAction(ItemStack stack, net.minecraftforge.common.ToolAction toolAction) {
-        return ECHO_SCYTHE_SET.contains(toolAction);
+        return SOUL_SCYTHE_SET.contains(toolAction);
     }
 
     public boolean canAttackBlock(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player pPlayer) {
@@ -100,6 +77,6 @@ public class EchoScytheItem extends DiggerItem implements Vanishable {
 
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, @NotNull TooltipFlag flagIn) {
-        tooltip.add(Component.translatable("item.echoesofthedeep.echo_scythe.desc").withStyle(ChatFormatting.DARK_GREEN));
+        tooltip.add(Component.translatable("item.echoesofthedeep.soul_scythe.desc").withStyle(ChatFormatting.DARK_GREEN));
     }
 }

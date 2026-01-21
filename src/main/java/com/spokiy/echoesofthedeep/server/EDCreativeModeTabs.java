@@ -17,7 +17,7 @@ public class EDCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EchoesOfTheDeep.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> ECHOES_OF_THE_DEEP_ITEMS_TAB = CREATIVE_MODE_TABS.register("echoesofthedeep_creative_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(EDItems.SHRIEKER_SMITHING_TEMPLATE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.SCULK_SHRIEKER))
                     .title(Component.translatable("creativetab.echoesofthedeep.echoes_of_the_deep"))
                     .displayItems((itemDisplayParameters, output) -> {
                         // Materials
@@ -37,7 +37,7 @@ public class EDCreativeModeTabs {
                         output.accept(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE);
                         output.accept(EDItems.SHRIEKER_SMITHING_TEMPLATE.get());
                         // Music disc
-                        output.accept(EDItems.ECHO_SCYTHE.get());
+                        output.accept(EDItems.SOUL_SCYTHE.get());
                         output.accept(Items.RECOVERY_COMPASS);
                         output.accept(EDItems.WARNING_CLOCK.get());
                         output.accept(Items.MUSIC_DISC_5);

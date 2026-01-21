@@ -1,8 +1,8 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
-  "item.echoesofthedeep.echo_scythe": "Echosense",
-  "item.echoesofthedeep.echo_scythe.desc": "Echo Scythe",
+  "item.echoesofthedeep.soul_scythe": "Seelensense",
+  "item.echoesofthedeep.soul_scythe.desc": "Echo Scythe",
 
   "block.echoesofthedeep.sculk_sprouts": "Sculk-Sprossen",
   "block.echoesofthedeep.sculk_guardian": "Sculk-Wächter",
@@ -16,9 +16,7 @@
 
 
   "enchantment.echoesofthedeep.reaper": "Reaper",
-  "enchantment.echoesofthedeep.reaper.desc": "Erhöht den Schaden von ausgedehnten Angriffen.",
-  "enchantment.echoesofthedeep.echo_resonance": "Echo Resonance",
-  "enchantment.echoesofthedeep.echo_resonance.desc": "Deal increased damage to a target for each enemy nearby.",
+  "enchantment.echoesofthedeep.reaper.desc": "Erhöht den Schaden von ausgedehnten Angriffen."
 
 
   "item.minecraft.potion.effect.blindness": "Trank der Blindheit",

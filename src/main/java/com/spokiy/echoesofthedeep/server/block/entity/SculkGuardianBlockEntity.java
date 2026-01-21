@@ -1,6 +1,6 @@
 package com.spokiy.echoesofthedeep.server.block.entity;
 
-import com.spokiy.echoesofthedeep.server.block.SculkGuardian;
+import com.spokiy.echoesofthedeep.server.block.SculkGuardianBlock;
 import com.spokiy.echoesofthedeep.server.block.EDBlockEntities;
 import com.spokiy.echoesofthedeep.server.util.Utils;
 import net.minecraft.core.BlockPos;
@@ -47,7 +47,7 @@ public class SculkGuardianBlockEntity extends BlockEntity implements GameEventLi
             ) return;
 
             BlockState blockState = this.getBlockState();
-            if (this.canRespond(level) && !blockState.getValue(SculkGuardian.SHRIEKING)) {
+            if (this.canRespond(level) && !blockState.getValue(SculkGuardianBlock.SHRIEKING)) {
                 this.emitSonicBoom(level, blockState, target);
             }
 
@@ -99,7 +99,7 @@ public class SculkGuardianBlockEntity extends BlockEntity implements GameEventLi
         }
         @Override
         public boolean canReceiveVibration(@NotNull ServerLevel level, @NotNull BlockPos pos, @NotNull GameEvent event, GameEvent.@NotNull Context context) {
-            return !SculkGuardianBlockEntity.this.getBlockState().getValue(SculkGuardian.SHRIEKING);
+            return !SculkGuardianBlockEntity.this.getBlockState().getValue(SculkGuardianBlock.SHRIEKING);
 
         }
 

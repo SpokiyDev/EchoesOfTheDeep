@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "echoesofthedeep:item/echo_scythe_model"
+    "layer0": "echoesofthedeep:item/soul_scythe_model"
   },
   "display": {
     "thirdperson_righthand": {

@@ -1,8 +1,8 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
-  "item.echoesofthedeep.echo_scythe": "Коса відлуння",
-  "item.echoesofthedeep.echo_scythe.desc": "Echo Scythe",
+  "item.echoesofthedeep.soul_scythe": "Коса душ",
+  "item.echoesofthedeep.soul_scythe.desc": "Коса душ",
 
   "block.echoesofthedeep.sculk_sprouts": "Скалкові паростки",
   "block.echoesofthedeep.sculk_guardian": "Скалковий вартовий",
@@ -16,9 +16,13 @@
 
 
   "enchantment.echoesofthedeep.reaper": "Жнець",
-  "enchantment.echoesofthedeep.reaper.desc": "Increases the damage of sweeping attacks up.",
+  "enchantment.echoesofthedeep.reaper.desc": "Збільшує шкоду від розмашистих атак аж до повної шкоди.",
   "enchantment.echoesofthedeep.resonance": "Резонанс",
-  "enchantment.echoesofthedeep.resonance.desc": "Deal increased damage to a target for each enemy nearby.",
+  "enchantment.echoesofthedeep.resonance.desc": "Завдає шкоди цілі протягом часу. Шкода зростає залежно від кількості ворогів поруч (макс. 2 ворога на рівень зачарування).",
+  "enchantment.echoesofthedeep.soul_harvester": "Збирач душ",
+  "enchantment.echoesofthedeep.soul_harvester.desc": "Збільшує к-ть досвіду з мобів, коли їх убивають.",
+  "enchantment.echoesofthedeep.life_harvester": "Збирач життів",
+  "enchantment.echoesofthedeep.life_harvester.desc": "Mobs will drop more experience when killed.",
 
   "effect.echoesofthedeep.echo_collapse": "Відлуння розрухи",
 

@@ -9,10 +9,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
-public class EchoScytheSweepAttack extends TextureSheetParticle {
+public class SoulScytheSweepAttack extends TextureSheetParticle {
     private final SpriteSet sprites;
 
-    EchoScytheSweepAttack(ClientLevel level, double x, double y, double z, double quadSizeMultiplier, SpriteSet sprites) {
+    SoulScytheSweepAttack(ClientLevel level, double x, double y, double z, double quadSizeMultiplier, SpriteSet sprites) {
         super(level, x, y, z, 0.0D, 0.0D, 0.0D);
         this.sprites = sprites;
         this.lifetime = 4;
@@ -20,7 +20,7 @@ public class EchoScytheSweepAttack extends TextureSheetParticle {
         this.rCol = f;
         this.gCol = f;
         this.bCol = f;
-        this.quadSize = (float) ((1.0 - quadSizeMultiplier * 0.5) * EDConfigs.ECHO_SCYTHE_SWEEP_ATTACK_PARTICLE_SIZE_MULTIPLIER.get());
+        this.quadSize = (float) ((1.0 - quadSizeMultiplier * 0.5) * EDConfigs.SOUL_SCYTHE_SWEEP_ATTACK_PARTICLE_SIZE_MULTIPLIER.get());
         this.setSpriteFromAge(sprites);
     }
 
@@ -52,7 +52,7 @@ public class EchoScytheSweepAttack extends TextureSheetParticle {
         }
 
         public Particle createParticle(@NotNull SimpleParticleType type, @NotNull ClientLevel level, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-            return new EchoScytheSweepAttack(level, x, y, z, xSpeed, this.sprites);
+            return new SoulScytheSweepAttack(level, x, y, z, xSpeed, this.sprites);
         }
     }
 }

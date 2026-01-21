@@ -2,42 +2,49 @@ package com.spokiy.echoesofthedeep.server.event;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import com.spokiy.echoesofthedeep.config.EDConfigs;
+import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
 import com.spokiy.echoesofthedeep.server.item.EDItems;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.warden.Warden;
 import net.minecraft.world.entity.monster.warden.WardenSpawnTracker;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.level.GameRules;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import java.util.List;
-import java.util.stream.Stream;
 
 @Mod.EventBusSubscriber(modid = EchoesOfTheDeep.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class EDEvents {
     private static int tickCounter = 0;
 
     @SubscribeEvent void onHurt(LivingHurtEvent event) {
+        LivingEntity target = event.getEntity();
         if (event.getSource().getEntity() instanceof Player player) {
-            ItemStack stack = player.getMainHandItem();
-            if (player.isCrouching() && stack.isEmpty()) return;
+            if (target.getHealth() <= 0 && player.level().getGameRules().getBoolean(GameRules.RULE_DOMOBLOOT)) {
 
-            stack.getTags().forEach(tag -> {
-                player.sendSystemMessage(Component.literal(tag.location().toString()));
-            });
+                ItemStack stack = player.getMainHandItem();
+                if (!player.isCrouching() && stack.isEmpty()) return;
 
+                stack.getTags().forEach(tag -> {
+                    player.sendSystemMessage(Component.literal(tag.location().toString()));
+                });
+
+            }
         }
     }
 
@@ -46,7 +53,7 @@ public class EDEvents {
         if (event.phase != TickEvent.Phase.END) return;
 
         tickCounter++;
-        if (tickCounter % 20 != 0) return; // оновлюємо кожні 5 тіків
+        if (tickCounter % 20 != 0) return;
 
         for (ServerPlayer player : event.getServer().getPlayerList().getPlayers()) {
             int warning = player.getWardenSpawnTracker()
@@ -64,24 +71,41 @@ public class EDEvents {
 
 
     @SubscribeEvent
-    public static void onLivingHurt(LivingHurtEvent event) {
+    public static void onLivingHurt(LivingDeathEvent event) {
         DamageSource source = event.getSource();
-        LivingEntity entity = event.getEntity();
+        LivingEntity target = event.getEntity();
 
-        if (EDConfigs.WARDEN_SONIC_ARMOR_PENETRATION_MULTIPLIER_ENABLED.get()) {
-            if (source.getMsgId().equals("sonic_boom") && source.getDirectEntity() instanceof Warden) {
-                float baseDamage = event.getAmount();
+        // Echo Scythe additional enchantments
+        if (source.getEntity() instanceof Player player && player.level() instanceof ServerLevel serverLevel) {
+            Vec3 pos = target.position();
 
-                AttributeInstance armorAttribute = entity.getAttribute(Attributes.ARMOR);
-                if (armorAttribute != null) {
-                    double multiplier = 1 - EDConfigs.WARDEN_SONIC_ARMOR_PENETRATION_MULTIPLIER.get();
+            // Soul Harvester enchantment mechanics
+            int i = EnchantmentHelper.getEnchantmentLevel(EDEnchantments.SOUL_HARVESTER.get(), player);
+            if (i > 0 && serverLevel.getGameRules().getBoolean(GameRules.RULE_DOMOBLOOT)) {
+                int reward = target.getExperienceReward();
+                int bonusExperienceReward = (int) Math.ceil(reward
+                        * (EDConfigs.SOUL_HARVESTER_EXPERIENCE_REWARD_MULTIPLIER.get() * i));
 
-                    float modifiedArmor = (float) (armorAttribute.getValue() * multiplier);
-                    float damageAfterArmor = baseDamage * (1 - modifiedArmor / 25f);
+                serverLevel.addFreshEntity(new ExperienceOrb(serverLevel,
+                        target.getX(), target.getY(), target.getZ(),
+                        bonusExperienceReward));
 
-                    event.setAmount(damageAfterArmor);
-                }
+                serverLevel.sendParticles(ParticleTypes.SCULK_SOUL,
+                        pos.x, pos.y + 0.26D, pos.z,
+                        2, 0.2D, 0.0D, 0.2D, 0.0D);
+
             }
+            // Life Harvester enchantment mechanics
+            i = EnchantmentHelper.getEnchantmentLevel(EDEnchantments.LIFE_HARVESTER.get(), player);
+            if (i > 0) {
+                float maxHealth = target.getMaxHealth();
+                double heal = maxHealth * (EDConfigs.LIFE_HARVESTER_LIFE_STEAL_BASE_PERCENTAGE.get() + EDConfigs.LIFE_HARVESTER_LIFE_STEAL_PERCENTAGE.get() * i);
+                Minecraft.getInstance().player.sendSystemMessage(Component.literal("" + (EDConfigs.LIFE_HARVESTER_LIFE_STEAL_BASE_PERCENTAGE.get() + EDConfigs.LIFE_HARVESTER_LIFE_STEAL_PERCENTAGE.get() * i)));
+                Minecraft.getInstance().player.sendSystemMessage(Component.literal("" + heal));
+                player.heal(Math.round(heal));
+
+            }
+
         }
     }
 

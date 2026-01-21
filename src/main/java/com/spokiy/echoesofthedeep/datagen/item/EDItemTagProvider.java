@@ -32,14 +32,14 @@ public class EDItemTagProvider extends ItemTagsProvider {
 
 
         tag(ItemTags.HOES)
-                .add(EDItems.ECHO_SCYTHE.get());
+                .add(EDItems.SOUL_SCYTHE.get());
 
         tag(ItemTags.TOOLS)
-                .add(EDItems.ECHO_SCYTHE.get());
+                .add(EDItems.SOUL_SCYTHE.get());
 
         // Custom tags
-        tag(EDTags.Items.ECHO_SCYTHE)
-                .add(EDItems.ECHO_SCYTHE.get());
+        tag(EDTags.Items.SOUL_SCYTHE)
+                .add(EDItems.SOUL_SCYTHE.get());
 
     }
 }

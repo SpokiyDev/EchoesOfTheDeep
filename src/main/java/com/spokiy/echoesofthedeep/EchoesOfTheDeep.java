@@ -17,7 +17,7 @@ import com.spokiy.echoesofthedeep.server.particle.EDParticles;
 import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
 import com.spokiy.echoesofthedeep.server.event.EDEvents;
 import com.spokiy.echoesofthedeep.server.loot.EDLootModifiers;
-import com.spokiy.echoesofthedeep.server.particle.EchoScytheSweepAttack;
+import com.spokiy.echoesofthedeep.server.particle.SoulScytheSweepAttack;
 import com.spokiy.echoesofthedeep.server.recipe.EDRecipes;
 import com.spokiy.echoesofthedeep.server.worldgen.feature.EDFeatures;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -108,7 +108,7 @@ public class EchoesOfTheDeep
 
         @SubscribeEvent
         public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
-            event.registerSpriteSet(EDParticles.ECHO_SCYTHE_SWEEP_ATTACK.get(), EchoScytheSweepAttack.Provider::new);
+            event.registerSpriteSet(EDParticles.SOUL_SCYTHE_SWEEP_ATTACK.get(), SoulScytheSweepAttack.Provider::new);
             event.registerSpriteSet(EDParticles.CALIBRATED_SCULK_SHRIEKER_SHRIEK_PARTICLE.get(), CalibratedSculkShriekerShriekParticle.Provider::new);
 
         }

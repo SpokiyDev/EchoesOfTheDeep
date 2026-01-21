@@ -6,17 +6,16 @@ public class EDConfigs {
 
     public static final ForgeConfigSpec COMMON_CONFIG;
 
-    public static ForgeConfigSpec.BooleanValue WARDEN_SONIC_ARMOR_PENETRATION_MULTIPLIER_ENABLED;
-    public static ForgeConfigSpec.DoubleValue WARDEN_SONIC_ARMOR_PENETRATION_MULTIPLIER;
-
-    public static ForgeConfigSpec.DoubleValue ECHO_SCYTHE_SWEEP_RADIUS_MULTIPLIER;
-    public static ForgeConfigSpec.DoubleValue ECHO_SCYTHE_BONUS_EXPERIENCE_REWARD_MULTIPLIER;
-    public static ForgeConfigSpec.DoubleValue ECHO_SCYTHE_SWEEP_DAMAGE_MULTIPLIER;
-    public static ForgeConfigSpec.DoubleValue ECHO_SCYTHE_SWEEP_ATTACK_PARTICLE_SIZE_MULTIPLIER;
+    public static ForgeConfigSpec.DoubleValue SOUL_SCYTHE_SWEEP_RADIUS_MULTIPLIER;
+    public static ForgeConfigSpec.DoubleValue SOUL_SCYTHE_SWEEP_DAMAGE_MULTIPLIER;
+    public static ForgeConfigSpec.DoubleValue SOUL_SCYTHE_SWEEP_ATTACK_PARTICLE_SIZE_MULTIPLIER;
 
     public static ForgeConfigSpec.DoubleValue REAPER_ENCHANTMENT_MULTIPLIER_PER_LEVEL;
     public static ForgeConfigSpec.DoubleValue ECHO_COLLAPSE_ENCHANTMENT_EFFECT_RADIUS;
     public static ForgeConfigSpec.DoubleValue ECHO_COLLAPSE_ENCHANTMENT_EFFECT_DAMAGE_PER_MOB;
+    public static ForgeConfigSpec.DoubleValue SOUL_HARVESTER_EXPERIENCE_REWARD_MULTIPLIER;
+    public static ForgeConfigSpec.DoubleValue LIFE_HARVESTER_LIFE_STEAL_BASE_PERCENTAGE;
+    public static ForgeConfigSpec.DoubleValue LIFE_HARVESTER_LIFE_STEAL_PERCENTAGE;
 
     // Sculk Shrieker Redesigned
     public static int SCULK_SHRIEKER_SUCK_COOLDOWN = 20;
@@ -27,28 +26,28 @@ public class EDConfigs {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
         builder.comment("General Mod Settings").push("general");
 
-        WARDEN_SONIC_ARMOR_PENETRATION_MULTIPLIER_ENABLED = buildBoolean(builder, "wardenSonicArmorPenetrationMultiplierEnabled", true,
-                "Enable for wardenSonicArmorPenetrationMultiplier");
-        WARDEN_SONIC_ARMOR_PENETRATION_MULTIPLIER = buildDouble(builder, "wardenSonicArmorPenetrationMultiplier", 0.8, 0, 1,
-                "1 (vanilla value) — Warden's Sonic Boom Attack ignores armor completely");
-
-        // Echo Scythe
-        ECHO_SCYTHE_SWEEP_RADIUS_MULTIPLIER = buildDouble(builder, "echoScytheSweepRadiusMultiplier", 2, 0, 100,
+        // Soul Scythe
+        SOUL_SCYTHE_SWEEP_RADIUS_MULTIPLIER = buildDouble(builder, "soulScytheSweepRadiusMultiplier", 2, 0, 100,
                 "");
-        ECHO_SCYTHE_BONUS_EXPERIENCE_REWARD_MULTIPLIER = buildDouble(builder, "echoScytheExperienceRewardMultiplier", 0.5, 0, 100,
+        SOUL_SCYTHE_SWEEP_DAMAGE_MULTIPLIER = buildDouble(builder, "soulScytheSweepDamageMultiplier", 0.5, 0, 100,
                 "");
-        ECHO_SCYTHE_SWEEP_DAMAGE_MULTIPLIER = buildDouble(builder, "echoScytheSweepDamageMultiplier", 0.5, 0, 100,
-                "");
-        ECHO_SCYTHE_SWEEP_ATTACK_PARTICLE_SIZE_MULTIPLIER = buildDouble(builder, "echoScytheSweepAttackParticleSizeMultiplier",
+        SOUL_SCYTHE_SWEEP_ATTACK_PARTICLE_SIZE_MULTIPLIER = buildDouble(builder, "soulScytheSweepAttackParticleSizeMultiplier",
                 1.2, 0, 100, "");
 
-        // Echo Scythe Enchantments
+        // Soul Scythe Enchantments
         REAPER_ENCHANTMENT_MULTIPLIER_PER_LEVEL = buildDouble(builder, "reaperEnchantmentMultiplierPerLevel", 0.1, 0, 100,
                 "");
 
         ECHO_COLLAPSE_ENCHANTMENT_EFFECT_RADIUS = buildDouble(builder, "echoCollapseEnchantmentEffectRadius", 2.5, 0, 100,
                 "");
         ECHO_COLLAPSE_ENCHANTMENT_EFFECT_DAMAGE_PER_MOB = buildDouble(builder, "echoCollapseEnchantmentEffectDamagePerMob", 0.5, 0, 100,
+                "");
+
+        SOUL_HARVESTER_EXPERIENCE_REWARD_MULTIPLIER = buildDouble(builder, "soulHarvesterExperienceRewardMultiplier", 0.15, 0, 100,
+                "");
+        LIFE_HARVESTER_LIFE_STEAL_BASE_PERCENTAGE = buildDouble(builder, "lifeHarvesterLifeStealPercentage", 0.025, 0, 100,
+                "");
+        LIFE_HARVESTER_LIFE_STEAL_PERCENTAGE = buildDouble(builder, "lifeHarvesterLifeStealPercentage", 0.025, 0, 100,
                 "");
 
 

@@ -11,10 +11,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-public class SculkSprouts extends BushBlock implements net.minecraftforge.common.IForgeShearable {
+public class SculkSproutsBlock extends BushBlock implements net.minecraftforge.common.IForgeShearable {
     protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 3.0D, 14.0D);
 
-    public SculkSprouts(BlockBehaviour.Properties properties) {
+    public SculkSproutsBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 

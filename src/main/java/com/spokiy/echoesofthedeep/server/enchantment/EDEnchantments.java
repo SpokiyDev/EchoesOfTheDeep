@@ -13,12 +13,17 @@ import net.minecraftforge.registries.RegistryObject;
 public class EDEnchantments {
     public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, EchoesOfTheDeep.MOD_ID);
 
-    public static final EnchantmentCategory ECHO_SCYTHE_CATEGORY = EnchantmentCategory.create("echo_scythe", (item -> item == EDItems.ECHO_SCYTHE.get()));
+    public static final EnchantmentCategory SOUL_SCYTHE_CATEGORY = EnchantmentCategory.create("soul_scythe", (item -> item == EDItems.SOUL_SCYTHE.get()));
 
+    // Soul Scythe
     public static final RegistryObject<Enchantment> REAPER =
             ENCHANTMENTS.register("reaper", () -> new ReaperEnchantment(EquipmentSlot.MAINHAND));
     public static final RegistryObject<Enchantment> RESONANCE =
             ENCHANTMENTS.register("resonance", () -> new ResonanceEnchantment(EquipmentSlot.MAINHAND));
+    public static final RegistryObject<Enchantment> SOUL_HARVESTER =
+            ENCHANTMENTS.register("soul_harvester", () -> new SoulHarvesterEnchantment(EquipmentSlot.MAINHAND));
+    public static final RegistryObject<Enchantment> LIFE_HARVESTER =
+            ENCHANTMENTS.register("life_harvester", () -> new LifeHarvesterEnchantment(EquipmentSlot.MAINHAND));
 
     public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);

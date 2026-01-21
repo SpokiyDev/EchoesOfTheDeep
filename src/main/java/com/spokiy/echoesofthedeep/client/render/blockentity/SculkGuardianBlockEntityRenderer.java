@@ -3,7 +3,7 @@ package com.spokiy.echoesofthedeep.client.render.blockentity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
-import com.spokiy.echoesofthedeep.server.block.SculkGuardian;
+import com.spokiy.echoesofthedeep.server.block.SculkGuardianBlock;
 import com.spokiy.echoesofthedeep.server.block.entity.SculkGuardianBlockEntity;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -53,7 +53,7 @@ public class SculkGuardianBlockEntityRenderer implements BlockEntityRenderer<Scu
 
 //        long time = level.getGameTime();
 //        int frameDuration = 100;
-        boolean isRecharging = entity.getBlockState().getValue(SculkGuardian.SHRIEKING);
+        boolean isRecharging = entity.getBlockState().getValue(SculkGuardianBlock.SHRIEKING);
         int frameIndex = isRecharging ? 0 : 1; //(int)(time / frameDuration) % 2;
 
         float u0 = 1f;

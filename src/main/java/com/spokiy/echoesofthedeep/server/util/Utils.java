@@ -1,7 +1,7 @@
 package com.spokiy.echoesofthedeep.server.util;
 
 import com.spokiy.echoesofthedeep.config.EDConfigs;
-import com.spokiy.echoesofthedeep.server.item.EchoScytheItem;
+import com.spokiy.echoesofthedeep.server.item.SoulScytheItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
@@ -19,15 +19,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import org.spongepowered.asm.mixin.Unique;
 
 public class Utils {
     public static AABB newSweepHitBox(ItemStack stack, Player player, Entity target) {
         AABB original = stack.getSweepHitBox(player, target);
-        if (!(stack.getItem() instanceof EchoScytheItem)) return original;
+        if (!(stack.getItem() instanceof SoulScytheItem)) return original;
 
-        double extraX = original.getXsize() * (EDConfigs.ECHO_SCYTHE_SWEEP_RADIUS_MULTIPLIER.get() - 1.0) / 2.0;
-        double extraZ = original.getZsize() * (EDConfigs.ECHO_SCYTHE_SWEEP_RADIUS_MULTIPLIER.get() - 1.0) / 2.0;
+        double extraX = original.getXsize() * (EDConfigs.SOUL_SCYTHE_SWEEP_RADIUS_MULTIPLIER.get() - 1.0) / 2.0;
+        double extraZ = original.getZsize() * (EDConfigs.SOUL_SCYTHE_SWEEP_RADIUS_MULTIPLIER.get() - 1.0) / 2.0;
 
         return original.inflate(extraX, 0.0, extraZ);
 

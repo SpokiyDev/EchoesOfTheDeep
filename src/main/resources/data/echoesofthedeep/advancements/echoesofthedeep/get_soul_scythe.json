@@ -1,14 +1,15 @@
 {
   "parent": "echoesofthedeep:echoesofthedeep/ancient_city",
   "display": {
+    "frame": "goal",
     "icon": {
-      "item": "echoesofthedeep:echo_scythe"
+      "item": "echoesofthedeep:soul_scythe"
     },
     "title": {
-      "translate": "advancements.echoesofthedeep.get_echo_scythe.title"
+      "translate": "advancements.echoesofthedeep.get_soul_scythe.title"
     },
     "description": {
-      "translate": "advancements.echoesofthedeep.get_echo_scythe.desc"
+      "translate": "advancements.echoesofthedeep.get_soul_scythe.desc"
     }
   },
   "criteria": {
@@ -18,7 +19,7 @@
         "items": [
           {
             "items": [
-              "echoesofthedeep:echo_scythe"
+              "echoesofthedeep:soul_scythe"
             ]
           }
         ]

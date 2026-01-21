@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "echoesofthedeep:item/soul_scythe_model"
+  },
+  "textures": {
+    "particle": "echoesofthedeep:item/soul_scythe"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "echoesofthedeep:item/soul_scythe_inventory"
+    },
+    "ground": {
+      "parent": "echoesofthedeep:item/soul_scythe_inventory"
+    },
+    "fixed": {
+      "parent": "echoesofthedeep:item/soul_scythe_inventory"
+    }
+  }
+}

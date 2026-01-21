@@ -5,10 +5,12 @@ import com.spokiy.echoesofthedeep.server.recipe.SculkShriekerRecipe;
 import com.spokiy.echoesofthedeep.server.recipe.SculkShriekerRecipeContainer;
 import com.spokiy.echoesofthedeep.server.util.SculkShriekerTickBridge;
 import com.spokiy.echoesofthedeep.server.util.Utils;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -151,7 +153,7 @@ public abstract class SculkShriekerBlockEntityMixin implements SculkShriekerTick
         motionX += (random.nextDouble() - 0.5D) * 0.05D;
         motionZ += (random.nextDouble() - 0.5D) * 0.05D;
 
-        double motionY = 0.24D + random.nextDouble() * 0.15D;
+        double motionY = 0.26D + random.nextDouble() * 0.1D;
 
         itemEntity.setDeltaMovement(motionX, motionY, motionZ);
         itemEntity.setDefaultPickUpDelay();
@@ -162,23 +164,27 @@ public abstract class SculkShriekerBlockEntityMixin implements SculkShriekerTick
     @Unique
     public void echoesOfTheDeep$dropAllItemsUp(Level level, Vec3 pos) {
         if (level.isClientSide) return;
+
+        boolean successful = false;
         for (int i = 0; i < this.getContainerSize(); i++) {
             ItemStack stack = this.getItem(i);
-
             if (!stack.isEmpty()) {
-                ItemStack stackToDrop = stack.copy();
-                this.setItem(i, ItemStack.EMPTY);
-                echoesOfTheDeep$dropStack(level, pos, stackToDrop);
+                successful = true;
+
+                echoesOfTheDeep$dropStack(level, pos, stack);
+                Utils.spawnEatParticles(level, pos, echoes$currentItemStack, 6);
 
             }
         }
 
-        Utils.spawnEatParticles(level, pos, echoes$currentItemStack, 10);
-        level.playSound(null, BlockPos.containing(pos),
-                SoundEvents.SCULK_SHRIEKER_BREAK, SoundSource.BLOCKS,
-                1.0F, 1.1F);
+        if (successful) {
+            this.clearContent();
+            level.playSound(null, BlockPos.containing(pos),
+                    SoundEvents.SCULK_SHRIEKER_BREAK, SoundSource.BLOCKS,
+                    1.0F, 1.1F);
 
-        this.setChanged();
+            this.setChanged();
+        }
     }
 
     // Item manipulations

@@ -1,7 +1,8 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Echoes of the Deep",
 
-  "item.echoesofthedeep.echo_scythe": "Каса рэхa",
+  "item.echoesofthedeep.soul_scythe": "Каса душ",
+  "item.echoesofthedeep.soul_scythe.desc": "Каса душ",
 
   "block.echoesofthedeep.sculk_sprouts": "Скалкавія парасткі",
   "block.echoesofthedeep.sculk_guardian": "Скалкавы вартавы",

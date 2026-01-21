@@ -18,8 +18,8 @@ public class EDItems {
     public static final RegistryObject<Item> WARNING_CLOCK = ITEMS.register("warning_clock",
             () -> new WarningClockItem());
 
-    public static final RegistryObject<Item> ECHO_SCYTHE = ITEMS.register("echo_scythe",
-            () -> new EchoScytheItem(Tiers.NETHERITE, 7, -3.2F));
+    public static final RegistryObject<Item> SOUL_SCYTHE = ITEMS.register("soul_scythe",
+            () -> new SoulScytheItem(Tiers.NETHERITE, 7, -3.2F));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

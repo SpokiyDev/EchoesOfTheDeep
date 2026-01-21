@@ -1,8 +1,8 @@
 {
   "creativetab.echoesofthedeep.echoes_of_the_deep": "Deep Dark",
 
-  "item.echoesofthedeep.echo_scythe": "Echo Scythe",
-  "item.echoesofthedeep.echo_scythe.desc": "Echo Scythe",
+  "item.echoesofthedeep.soul_scythe": "Soul Scythe",
+  "item.echoesofthedeep.soul_scythe.desc": "Soul Scythe",
 
   "block.echoesofthedeep.sculk_sprouts": "Sculk Sprouts",
   "block.echoesofthedeep.sculk_guardian": "Sculk Guardian",
@@ -17,9 +17,13 @@
 
 
   "enchantment.echoesofthedeep.reaper": "Reaper",
-  "enchantment.echoesofthedeep.reaper.desc": "Increases the damage of sweeping attacks up.",
-  "enchantment.echoesofthedeep.resonance": "Echo Resonance",
-  "enchantment.echoesofthedeep.resonance.desc": "Deal increased damage to a target for each enemy nearby.",
+  "enchantment.echoesofthedeep.reaper.desc": "Increases the damage of sweeping attacks up to the full amount of damage.",
+  "enchantment.echoesofthedeep.resonance": "Resonance",
+  "enchantment.echoesofthedeep.resonance.desc": "Applies a damage-over-time effect to the target. Damage increases with nearby enemies (up to 2 per level of the enchantment).",
+  "enchantment.echoesofthedeep.soul_harvester": "Soul Harvester",
+  "enchantment.echoesofthedeep.soul_harvester.desc": "Mobs will drop more experience when killed.",
+  "enchantment.echoesofthedeep.life_harvester": "Life Harvester",
+  "enchantment.echoesofthedeep.life_harvester.desc": "Mobs will drop more experience when killed.",
 
   "effect.echoesofthedeep.echo_collapse": "Echo Collapse",
 

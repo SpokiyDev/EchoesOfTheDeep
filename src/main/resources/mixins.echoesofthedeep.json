@@ -6,7 +6,6 @@
   "mixins": [
     "PlayerMixin",
     "SculkBlockMixin",
-    "SculkPatchFeatureMixin",
     "SculkShriekerBlockEntityMixin",
     "SculkShriekerBlockMixin"
   ],
