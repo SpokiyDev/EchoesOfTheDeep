@@ -15,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Locale;
+import java.util.Objects;
 
 import static net.minecraft.Util.prefix;
 
@@ -34,10 +35,21 @@ public class EDBlockStateProvider extends BlockStateProvider {
         randomVariantBlock(EDBlocks.SCULK_SPROUTS, "sculk_sprouts_0", "sculk_sprouts_1");
         blockWithExistingModel(EDBlocks.SCULK_GUARDIAN);
         blockWithExistingModel(EDBlocks.CALIBRATED_SCULK_SHRIEKER);
+        blockStateWithPath(EDBlocks.WARDEN_HEAD, "block/skull");
     }
 
     public static String name(Block block) {
-        return ForgeRegistries.BLOCKS.getKey(block).getPath();
+        return Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
+    }
+
+    private void blockStateWithPath(RegistryObject<Block> block, String path) {
+        this.simpleBlock(
+                block.get(),
+                new ModelFile.ExistingModelFile(
+                        ResourceLocation.fromNamespaceAndPath("minecraft", path),
+                        models().existingFileHelper
+                )
+        );
     }
 
     private void blockWithExistingModel(RegistryObject<Block> block) {

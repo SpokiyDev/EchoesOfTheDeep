@@ -1,8 +1,11 @@
 package com.spokiy.echoesofthedeep.server.item;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
+import com.spokiy.echoesofthedeep.server.block.EDBlocks;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,6 +23,9 @@ public class EDItems {
 
     public static final RegistryObject<Item> SOUL_SCYTHE = ITEMS.register("soul_scythe",
             () -> new SoulScytheItem(Tiers.NETHERITE, 7, -3.2F));
+
+    public static final RegistryObject<Item> WARDEN_HEAD = ITEMS.register("warden_head",
+            () -> new BlockItem(EDBlocks.WARDEN_HEAD.get(), new Item.Properties().rarity(Rarity.UNCOMMON)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

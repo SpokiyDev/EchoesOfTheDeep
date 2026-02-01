@@ -1,0 +1,30 @@
+{
+  "parent": "echoesofthedeep:echoesofthedeep/kill_warden",
+  "display": {
+    "announce_to_chat": true,
+    "frame": "challenge",
+    "icon": {
+      "item": "echoesofthedeep:warden_head"
+    },
+    "title": {
+      "translate": "advancements.echoesofthedeep.get_warden_head.title"
+    },
+    "description": {
+      "translate": "advancements.echoesofthedeep.get_warden_head.desc"
+    }
+  },
+  "criteria": {
+    "getItem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "echoesofthedeep:warden_head"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

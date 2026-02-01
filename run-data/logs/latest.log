@@ -1,48 +1,49 @@
-[20січ.2026 19:00:08.744] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, /home/pavlo/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.4.10, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, echoesofthedeep, --all, --output, /home/pavlo/MyFiles/Projects/MinecraftModding/EchoesOfTheDeep/EchoesOfTheDeep-1.20.x/src/generated/resources, --existing, /home/pavlo/MyFiles/Projects/MinecraftModding/EchoesOfTheDeep/EchoesOfTheDeep-1.20.x/src/main/resources, --mixin.config, mixins.echoesofthedeep.json]
-[20січ.2026 19:00:08.748] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.17 by Eclipse Adoptium; OS Linux arch amd64 version 6.5.0-060500-generic
-[20січ.2026 19:00:08.889] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[20січ.2026 19:00:08.973] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/pavlo/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
-[20січ.2026 19:00:09.452] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/pavlo/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.4.10/ccc533c7dd67e0983217197d7549c8b49e7ab453/javafmllanguage-1.20.1-47.4.10.jar is missing mods.toml file
-[20січ.2026 19:00:09.455] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/pavlo/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.4.10/e9a2879fe3612ea34b9728ec2633304a1e67d480/lowcodelanguage-1.20.1-47.4.10.jar is missing mods.toml file
-[20січ.2026 19:00:09.457] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/pavlo/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.4.10/ec5cefbbc65c67302b8fac317010faab85fa14b9/mclanguage-1.20.1-47.4.10.jar is missing mods.toml file
-[20січ.2026 19:00:09.460] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/pavlo/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.4.10/94dae566be650566ea9115a1414ab76bfcf5a804/fmlcore-1.20.1-47.4.10.jar is missing mods.toml file
-[20січ.2026 19:00:09.545] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[20січ.2026 19:00:11.156] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by mixins.echoesofthedeep.json is higher than the maximum level supported by this version of mixin (JAVA_13).
-[20січ.2026 19:00:11.157] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[20січ.2026 19:00:11.157] [main/ERROR] [mixin/]: Mixin config mixins.echoesofthedeep.json does not specify "minVersion" property
-[20січ.2026 19:00:11.163] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, /home/pavlo/.gradle/caches/forge_gradle/assets, --assetIndex, 5, --mod, echoesofthedeep, --all, --output, /home/pavlo/MyFiles/Projects/MinecraftModding/EchoesOfTheDeep/EchoesOfTheDeep-1.20.x/src/generated/resources, --existing, /home/pavlo/MyFiles/Projects/MinecraftModding/EchoesOfTheDeep/EchoesOfTheDeep-1.20.x/src/main/resources]
-[20січ.2026 19:00:11.193] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
-[20січ.2026 19:00:11.194] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
-[20січ.2026 19:00:11.203] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
-[20січ.2026 19:00:11.204] [main/INFO] [mixin/]: Selecting config mixins.echoesofthedeep.json
-[20січ.2026 19:00:11.208] [main/WARN] [mixin/]: Reference map 'mixins.echoesofthedeep.refmap.json' for mixins.echoesofthedeep.json could not be read. If this is a development environment you can ignore this message
-[20січ.2026 19:00:11.210] [main/INFO] [mixin/]: Preparing mixins.echoesofthedeep.json (4)
-[20січ.2026 19:00:11.747] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [echoesofthedeep]
-[20січ.2026 19:00:11.996] [main/INFO] [mixin/]: Mixing PlayerMixin from mixins.echoesofthedeep.json into net.minecraft.world.entity.player.Player
-[20січ.2026 19:00:13.145] [main/INFO] [mixin/]: Mixing SculkBlockMixin from mixins.echoesofthedeep.json into net.minecraft.world.level.block.SculkBlock
-[20січ.2026 19:00:13.151] [main/INFO] [mixin/]: Renaming synthetic method lambda$echoesOfTheDeep_1_20_x$place$0(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Holder$Reference;)V to mdaad45d$lambda$echoesOfTheDeep_1_20_x$place$0$0 in mixins.echoesofthedeep.json:SculkBlockMixin
-[20січ.2026 19:00:13.177] [main/INFO] [mixin/]: Mixing SculkShriekerBlockMixin from mixins.echoesofthedeep.json into net.minecraft.world.level.block.SculkShriekerBlock
-[20січ.2026 19:00:13.178] [main/INFO] [mixin/]: Renaming synthetic method lambda$wrapTicker$0(Lnet/minecraft/world/level/block/entity/BlockEntityTicker;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntity;)V to mdaad45d$lambda$wrapTicker$0$0 in mixins.echoesofthedeep.json:SculkShriekerBlockMixin
-[20січ.2026 19:00:14.617] [main/INFO] [mixin/]: Mixing SculkShriekerBlockEntityMixin from mixins.echoesofthedeep.json into net.minecraft.world.level.block.entity.SculkShriekerBlockEntity
-[20січ.2026 19:00:18.076] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.10, for MC 1.20.1 with MCP 20230612.114412
-[20січ.2026 19:00:18.077] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.10 Initialized
-[20січ.2026 19:00:18.633] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/pavlo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.10_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.10_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
-[20січ.2026 19:00:18.633] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/pavlo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.10_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.10_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
-[20січ.2026 19:00:18.898] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[20січ.2026 19:00:19.191] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 292 ms
-[20січ.2026 19:00:19.191] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id echoesofthedeep
-[20січ.2026 19:00:19.206] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id echoesofthedeep finished after 14 ms
-[20січ.2026 19:00:19.206] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id echoesofthedeep
-[20січ.2026 19:00:19.210] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id echoesofthedeep finished after 3 ms
-[20січ.2026 19:00:19.210] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[20січ.2026 19:00:19.242] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 31 ms
-[20січ.2026 19:00:19.242] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : echoesofthedeep
-[20січ.2026 19:00:19.244] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : echoesofthedeep finished after 1 ms
-[20січ.2026 19:00:19.245] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[20січ.2026 19:00:19.276] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 30 ms
-[20січ.2026 19:00:19.276] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: echoesofthedeep
-[20січ.2026 19:00:19.409] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: echoesofthedeep finished after 133 ms
-[20січ.2026 19:00:19.410] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: echoesofthedeep
-[20січ.2026 19:00:19.417] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: echoesofthedeep finished after 7 ms
-[20січ.2026 19:00:19.417] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 520 ms
-[20січ.2026 19:00:19.425] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 33, old count: 34, new count: 34, removed stale: 0, written: 0
+[28січ.2026 21:52:13.860] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, /home/pavlo/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.4.10, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, echoesofthedeep, --all, --output, /home/pavlo/MyFiles/Projects/MinecraftModding/EchoesOfTheDeep/EchoesOfTheDeep-1.20.x/src/generated/resources, --existing, /home/pavlo/MyFiles/Projects/MinecraftModding/EchoesOfTheDeep/EchoesOfTheDeep-1.20.x/src/main/resources, --mixin.config, mixins.echoesofthedeep.json]
+[28січ.2026 21:52:13.865] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.17 by Eclipse Adoptium; OS Linux arch amd64 version 6.5.0-060500-generic
+[28січ.2026 21:52:13.969] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[28січ.2026 21:52:14.023] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/pavlo/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
+[28січ.2026 21:52:14.389] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/pavlo/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.4.10/ccc533c7dd67e0983217197d7549c8b49e7ab453/javafmllanguage-1.20.1-47.4.10.jar is missing mods.toml file
+[28січ.2026 21:52:14.390] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/pavlo/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.4.10/e9a2879fe3612ea34b9728ec2633304a1e67d480/lowcodelanguage-1.20.1-47.4.10.jar is missing mods.toml file
+[28січ.2026 21:52:14.392] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/pavlo/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.4.10/ec5cefbbc65c67302b8fac317010faab85fa14b9/mclanguage-1.20.1-47.4.10.jar is missing mods.toml file
+[28січ.2026 21:52:14.394] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/pavlo/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.4.10/94dae566be650566ea9115a1414ab76bfcf5a804/fmlcore-1.20.1-47.4.10.jar is missing mods.toml file
+[28січ.2026 21:52:14.454] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[28січ.2026 21:52:15.718] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by mixins.echoesofthedeep.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[28січ.2026 21:52:15.719] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[28січ.2026 21:52:15.719] [main/ERROR] [mixin/]: Mixin config mixins.echoesofthedeep.json does not specify "minVersion" property
+[28січ.2026 21:52:15.722] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, /home/pavlo/.gradle/caches/forge_gradle/assets, --assetIndex, 5, --mod, echoesofthedeep, --all, --output, /home/pavlo/MyFiles/Projects/MinecraftModding/EchoesOfTheDeep/EchoesOfTheDeep-1.20.x/src/generated/resources, --existing, /home/pavlo/MyFiles/Projects/MinecraftModding/EchoesOfTheDeep/EchoesOfTheDeep-1.20.x/src/main/resources]
+[28січ.2026 21:52:15.744] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[28січ.2026 21:52:15.745] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[28січ.2026 21:52:15.753] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[28січ.2026 21:52:15.753] [main/INFO] [mixin/]: Selecting config mixins.echoesofthedeep.json
+[28січ.2026 21:52:15.756] [main/WARN] [mixin/]: Reference map 'mixins.echoesofthedeep.refmap.json' for mixins.echoesofthedeep.json could not be read. If this is a development environment you can ignore this message
+[28січ.2026 21:52:15.758] [main/INFO] [mixin/]: Preparing mixins.echoesofthedeep.json (5)
+[28січ.2026 21:52:16.197] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [echoesofthedeep]
+[28січ.2026 21:52:16.412] [main/INFO] [mixin/]: Mixing PlayerMixin from mixins.echoesofthedeep.json into net.minecraft.world.entity.player.Player
+[28січ.2026 21:52:17.232] [main/INFO] [mixin/]: Mixing NoteBlockMixin from mixins.echoesofthedeep.json into net.minecraft.world.level.block.NoteBlock
+[28січ.2026 21:52:17.379] [main/INFO] [mixin/]: Mixing SculkBlockMixin from mixins.echoesofthedeep.json into net.minecraft.world.level.block.SculkBlock
+[28січ.2026 21:52:17.380] [main/INFO] [mixin/]: Renaming synthetic method lambda$echoesOfTheDeep_1_20_x$place$0(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Holder$Reference;)V to mda5b316$lambda$echoesOfTheDeep_1_20_x$place$0$0 in mixins.echoesofthedeep.json:SculkBlockMixin
+[28січ.2026 21:52:17.397] [main/INFO] [mixin/]: Mixing SculkShriekerBlockMixin from mixins.echoesofthedeep.json into net.minecraft.world.level.block.SculkShriekerBlock
+[28січ.2026 21:52:17.398] [main/INFO] [mixin/]: Renaming synthetic method lambda$wrapTicker$0(Lnet/minecraft/world/level/block/entity/BlockEntityTicker;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntity;)V to mda5b316$lambda$wrapTicker$0$0 in mixins.echoesofthedeep.json:SculkShriekerBlockMixin
+[28січ.2026 21:52:18.394] [main/INFO] [mixin/]: Mixing SculkShriekerBlockEntityMixin from mixins.echoesofthedeep.json into net.minecraft.world.level.block.entity.SculkShriekerBlockEntity
+[28січ.2026 21:52:20.653] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.10, for MC 1.20.1 with MCP 20230612.114412
+[28січ.2026 21:52:20.653] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.10 Initialized
+[28січ.2026 21:52:21.106] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/pavlo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.10_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.10_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
+[28січ.2026 21:52:21.107] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/pavlo/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.10_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.10_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
+[28січ.2026 21:52:21.268] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[28січ.2026 21:52:21.457] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 188 ms
+[28січ.2026 21:52:21.457] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id echoesofthedeep
+[28січ.2026 21:52:21.467] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id echoesofthedeep finished after 9 ms
+[28січ.2026 21:52:21.468] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id echoesofthedeep
+[28січ.2026 21:52:21.470] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id echoesofthedeep finished after 2 ms
+[28січ.2026 21:52:21.470] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[28січ.2026 21:52:21.498] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 27 ms
+[28січ.2026 21:52:21.498] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : echoesofthedeep
+[28січ.2026 21:52:21.505] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : echoesofthedeep finished after 6 ms
+[28січ.2026 21:52:21.505] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[28січ.2026 21:52:21.533] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 27 ms
+[28січ.2026 21:52:21.533] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: echoesofthedeep
+[28січ.2026 21:52:21.629] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: echoesofthedeep finished after 96 ms
+[28січ.2026 21:52:21.629] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: echoesofthedeep
+[28січ.2026 21:52:21.634] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: echoesofthedeep finished after 4 ms
+[28січ.2026 21:52:21.634] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 366 ms
+[28січ.2026 21:52:21.642] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 36, old count: 35, new count: 37, removed stale: 0, written: 1

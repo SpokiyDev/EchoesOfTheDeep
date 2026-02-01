@@ -2,7 +2,7 @@ package com.spokiy.echoesofthedeep.server.block;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import com.spokiy.echoesofthedeep.server.block.entity.SculkGuardianBlockEntity;
-import com.spokiy.echoesofthedeep.server.block.entity.WardenHeadBlockEntity;
+import com.spokiy.echoesofthedeep.server.block.entity.EDSkullBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,9 +18,9 @@ public class EDBlockEntities {
                     BlockEntityType.Builder.of(SculkGuardianBlockEntity::new,
                             EDBlocks.SCULK_GUARDIAN.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<WardenHeadBlockEntity>> WARDEN_HEAD =
-            BLOCK_ENTITIES.register("warden_head_block_entity", () ->
-                    BlockEntityType.Builder.of(WardenHeadBlockEntity::new,
+    public static final RegistryObject<BlockEntityType<EDSkullBlockEntity>> SKULL =
+            BLOCK_ENTITIES.register("skull", () ->
+                    BlockEntityType.Builder.of(EDSkullBlockEntity::new,
                             EDBlocks.WARDEN_HEAD.get()).build(null));
 
 

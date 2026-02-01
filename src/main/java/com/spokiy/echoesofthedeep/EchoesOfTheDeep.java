@@ -3,27 +3,26 @@ package com.spokiy.echoesofthedeep;
 import com.mojang.logging.LogUtils;
 import com.spokiy.echoesofthedeep.client.EDClientEvents;
 import com.spokiy.echoesofthedeep.client.item.EDItemProperties;
-import com.spokiy.echoesofthedeep.client.render.entity.CalibratedSculkShriekerShriekEntityRenderer;
+import com.spokiy.echoesofthedeep.client.render.EDEntityRenders;
 import com.spokiy.echoesofthedeep.config.EDConfigs;
 import com.spokiy.echoesofthedeep.server.EDCreativeModeTabs;
 import com.spokiy.echoesofthedeep.server.block.EDBlockEntities;
 import com.spokiy.echoesofthedeep.server.block.EDBlocks;
+import com.spokiy.echoesofthedeep.server.block.EDWallScullBlock;
 import com.spokiy.echoesofthedeep.server.entity.EDEntities;
 import com.spokiy.echoesofthedeep.server.item.EDItems;
 import com.spokiy.echoesofthedeep.server.item.EDPotions;
 import com.spokiy.echoesofthedeep.server.mob_effect.EDMobEffects;
-import com.spokiy.echoesofthedeep.server.particle.CalibratedSculkShriekerShriekParticle;
 import com.spokiy.echoesofthedeep.server.particle.EDParticles;
 import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
 import com.spokiy.echoesofthedeep.server.event.EDEvents;
 import com.spokiy.echoesofthedeep.server.loot.EDLootModifiers;
-import com.spokiy.echoesofthedeep.server.particle.SoulScytheSweepAttack;
 import com.spokiy.echoesofthedeep.server.recipe.EDRecipes;
 import com.spokiy.echoesofthedeep.server.worldgen.feature.EDFeatures;
-import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.blockentity.SkullBlockRenderer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -74,11 +73,10 @@ public class EchoesOfTheDeep
 
     }
 
-
     private void setup(final FMLCommonSetupEvent event) {
-        EDPotions.registerPotionsRecipes();
-
         event.enqueueWork(() -> {
+            EDPotions.registerPotionsRecipes();
+
             ComposterBlock.COMPOSTABLES.put(EDBlocks.SCULK_SPROUTS.get().asItem(), 0.5F);
         });
 
@@ -96,21 +94,14 @@ public class EchoesOfTheDeep
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            MinecraftForge.EVENT_BUS.register(new EDClientEvents());
-            EDItemProperties.registerItemProperties(event);
-
-            EntityRenderers.register(
-                    EDEntities.CALIBRATED_SCULK_SHRIEKER_SHRIEK.get(),
-                    CalibratedSculkShriekerShriekEntityRenderer::new
-            );
-
+            event.enqueueWork(() -> {
+                MinecraftForge.EVENT_BUS.register(new EDClientEvents());
+                EDItemProperties.register();
+                EDEntityRenders.register();
+                // Skulls
+                SkullBlockRenderer.SKIN_BY_TYPE.put(EDWallScullBlock.EDTypes.WARDEN, ResourceLocation.parse("textures/entity/warden/warden.png"));
+            });
         }
 
-        @SubscribeEvent
-        public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
-            event.registerSpriteSet(EDParticles.SOUL_SCYTHE_SWEEP_ATTACK.get(), SoulScytheSweepAttack.Provider::new);
-            event.registerSpriteSet(EDParticles.CALIBRATED_SCULK_SHRIEKER_SHRIEK_PARTICLE.get(), CalibratedSculkShriekerShriekParticle.Provider::new);
-
-        }
     }
 }

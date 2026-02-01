@@ -42,6 +42,7 @@ public class EDCreativeModeTabs {
                         output.accept(EDItems.WARNING_CLOCK.get());
                         output.accept(Items.MUSIC_DISC_5);
                         output.accept(Items.DISC_FRAGMENT_5);
+                        output.accept(EDItems.WARDEN_HEAD.get());
 
                     }).build());
 

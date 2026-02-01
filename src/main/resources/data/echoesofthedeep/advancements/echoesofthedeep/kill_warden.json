@@ -1,0 +1,27 @@
+{
+  "parent": "",
+  "display": {
+    "announce_to_chat": true,
+    "hidden": true,
+    "frame": "goal",
+    "icon": {
+      "item": "echoesofthedeep:warden_head"
+    },
+    "title": {
+      "translate": "advancements.echoesofthedeep.kill_warden.title"
+    },
+    "description": {
+      "translate": "advancements.echoesofthedeep.kill_warden.title"
+    }
+  },
+  "criteria": {
+    "killed": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:warden"
+        }
+      }
+    }
+  }
+}

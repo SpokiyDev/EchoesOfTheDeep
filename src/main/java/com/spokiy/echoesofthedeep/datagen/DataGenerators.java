@@ -6,6 +6,7 @@ import com.spokiy.echoesofthedeep.datagen.block.EDBlockTagProvider;
 import com.spokiy.echoesofthedeep.datagen.item.EDItemModelProvider;
 import com.spokiy.echoesofthedeep.datagen.item.EDItemTagProvider;
 import com.spokiy.echoesofthedeep.datagen.loot.EDBlockLootProvider;
+import com.spokiy.echoesofthedeep.datagen.loot.EDEntityLootProvider;
 import com.spokiy.echoesofthedeep.datagen.loot.GlobalLootModifiersProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -39,11 +40,11 @@ public class DataGenerators {
                 new EDItemTagProvider(output, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
         generator.addProvider(event.includeServer(),
                 new EDRecipeProvider(output));
+        // Loot
         generator.addProvider(event.includeServer(),
                 new GlobalLootModifiersProvider(output));
         generator.addProvider(event.includeServer(), new LootTableProvider(output, Collections.emptySet(), List.of(
-                new LootTableProvider.SubProviderEntry(EDBlockLootProvider::new, LootContextParamSets.BLOCK)
-        )));
+                new LootTableProvider.SubProviderEntry(EDBlockLootProvider::new, LootContextParamSets.BLOCK))));
 
         EDBlockStateProvider blockStates = new EDBlockStateProvider(output, existingFileHelper);
         generator.addProvider(event.includeClient(), blockStates);
