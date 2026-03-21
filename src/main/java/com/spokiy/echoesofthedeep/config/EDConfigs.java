@@ -11,15 +11,20 @@ public class EDConfigs {
     public static ForgeConfigSpec.DoubleValue SOUL_SCYTHE_SWEEP_ATTACK_PARTICLE_SIZE_MULTIPLIER;
 
     public static ForgeConfigSpec.DoubleValue REAPER_ENCHANTMENT_MULTIPLIER_PER_LEVEL;
-    public static ForgeConfigSpec.DoubleValue ECHO_COLLAPSE_ENCHANTMENT_EFFECT_RADIUS;
-    public static ForgeConfigSpec.DoubleValue ECHO_COLLAPSE_ENCHANTMENT_EFFECT_DAMAGE_PER_MOB;
+
+    public static ForgeConfigSpec.IntValue ECHO_STRIKE_EFFECT_DURATION_SECONDS;
+    public static ForgeConfigSpec.DoubleValue SOUL_STRIKE_BASE_DAMAGE_MULTIPLIER;
+    public static ForgeConfigSpec.DoubleValue SOUL_STRIKE_DAMAGE_MULTIPLIER_PER_LEVEL;
+
     public static ForgeConfigSpec.DoubleValue SOUL_HARVESTER_EXPERIENCE_REWARD_MULTIPLIER;
     public static ForgeConfigSpec.DoubleValue LIFE_HARVESTER_LIFE_STEAL_BASE_PERCENTAGE;
     public static ForgeConfigSpec.DoubleValue LIFE_HARVESTER_LIFE_STEAL_PERCENTAGE;
 
+    public static int CLOCK_MAX_STATE = 32;
+
     // Sculk Shrieker Redesigned
     public static int SCULK_SHRIEKER_SUCK_COOLDOWN = 20;
-    public static int SCULK_SHRIEKER_DROP_ITEMS_COOLDOWN = 100; // 160
+    public static int SCULK_SHRIEKER_DROP_ITEMS_COOLDOWN = 160; // 160
     public static float SCULK_SHRIEKER_EAT_SOUND_PITCH = 0.75F;
 
     static {
@@ -38,9 +43,11 @@ public class EDConfigs {
         REAPER_ENCHANTMENT_MULTIPLIER_PER_LEVEL = buildDouble(builder, "reaperEnchantmentMultiplierPerLevel", 0.1, 0, 100,
                 "");
 
-        ECHO_COLLAPSE_ENCHANTMENT_EFFECT_RADIUS = buildDouble(builder, "echoCollapseEnchantmentEffectRadius", 2.5, 0, 100,
+        ECHO_STRIKE_EFFECT_DURATION_SECONDS = buildInt(builder, "soulStrikeEffectDurationSeconds", 15, 0, 100000,
                 "");
-        ECHO_COLLAPSE_ENCHANTMENT_EFFECT_DAMAGE_PER_MOB = buildDouble(builder, "echoCollapseEnchantmentEffectDamagePerMob", 0.5, 0, 100,
+        SOUL_STRIKE_BASE_DAMAGE_MULTIPLIER = buildDouble(builder, "soulStrikeBaseDamageMultiplier", 1.2, 0, 100,
+                "");
+        SOUL_STRIKE_DAMAGE_MULTIPLIER_PER_LEVEL = buildDouble(builder, "soulStrikeDamageMultiplierPerLevel", 0.2, 0, 10,
                 "");
 
         SOUL_HARVESTER_EXPERIENCE_REWARD_MULTIPLIER = buildDouble(builder, "soulHarvesterExperienceRewardMultiplier", 0.15, 0, 100,

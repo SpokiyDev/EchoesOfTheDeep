@@ -3,16 +3,12 @@ package com.spokiy.echoesofthedeep.mixin;
 import com.spokiy.echoesofthedeep.config.EDConfigs;
 import com.spokiy.echoesofthedeep.server.item.SoulScytheItem;
 import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
-import com.spokiy.echoesofthedeep.server.mob_effect.EDMobEffects;
 import com.spokiy.echoesofthedeep.server.particle.EDParticles;
-import com.spokiy.echoesofthedeep.server.util.Utils;
-import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
+import com.spokiy.echoesofthedeep.util.Utils;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -62,20 +58,9 @@ public abstract class PlayerMixin extends LivingEntity {
         Player player = (Player)(Object)this;
         ItemStack stack = player.getMainHandItem();
 
-        // Echo Resonance Effect
-        if (target instanceof LivingEntity livingEntity) {
-            int i = EnchantmentHelper.getEnchantmentLevel(EDEnchantments.RESONANCE.get(), player);
-            if (i > 0) {
-                livingEntity.addEffect(new MobEffectInstance(EDMobEffects.ECHO_COLLAPSE.get(), 90, i - 1));
-                livingEntity.getPersistentData().putUUID("echoesofthedeep.echo_collapse.effect.source", player.getUUID());
-            }
-        }
-
         // If Echo Scythe
         // Get vanilla damage output
         if (stack.getItem() instanceof SoulScytheItem) {
-            Minecraft.getInstance().player.sendSystemMessage(Component.literal("" + echoesOfTheDeep$f));
-
             // Echo Scythe sweep damage multiplier and the reaper enchantment
             int i = EnchantmentHelper.getTagEnchantmentLevel(EDEnchantments.REAPER.get(), stack);
             double multiplier = EDConfigs.SOUL_SCYTHE_SWEEP_DAMAGE_MULTIPLIER.get() +

@@ -1,6 +1,10 @@
 package com.spokiy.echoesofthedeep.server.enchantment;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
+import com.spokiy.echoesofthedeep.server.enchantment.soul_scythe.LifeHarvesterEnchantment;
+import com.spokiy.echoesofthedeep.server.enchantment.soul_scythe.ReaperEnchantment;
+import com.spokiy.echoesofthedeep.server.enchantment.soul_scythe.EchoStrikeEnchantment;
+import com.spokiy.echoesofthedeep.server.enchantment.soul_scythe.SoulHarvesterEnchantment;
 import com.spokiy.echoesofthedeep.server.item.EDItems;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
@@ -18,8 +22,8 @@ public class EDEnchantments {
     // Soul Scythe
     public static final RegistryObject<Enchantment> REAPER =
             ENCHANTMENTS.register("reaper", () -> new ReaperEnchantment(EquipmentSlot.MAINHAND));
-    public static final RegistryObject<Enchantment> RESONANCE =
-            ENCHANTMENTS.register("resonance", () -> new ResonanceEnchantment(EquipmentSlot.MAINHAND));
+    public static final RegistryObject<Enchantment> ECHO_STRIKE =
+            ENCHANTMENTS.register("echo_strike", () -> new EchoStrikeEnchantment(EquipmentSlot.MAINHAND));
     public static final RegistryObject<Enchantment> SOUL_HARVESTER =
             ENCHANTMENTS.register("soul_harvester", () -> new SoulHarvesterEnchantment(EquipmentSlot.MAINHAND));
     public static final RegistryObject<Enchantment> LIFE_HARVESTER =

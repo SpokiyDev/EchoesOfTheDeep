@@ -19,14 +19,14 @@
 
   "enchantment.echoesofthedeep.reaper": "Reaper",
   "enchantment.echoesofthedeep.reaper.desc": "Increases the damage of sweeping attacks up to the full amount of damage.",
-  "enchantment.echoesofthedeep.resonance": "Resonance",
-  "enchantment.echoesofthedeep.resonance.desc": "Applies a damage-over-time effect to the target. Damage increases with nearby enemies (up to 2 per level of the enchantment).",
-  "enchantment.echoesofthedeep.soul_harvester": "Soul Harvester",
+  "enchantment.echoesofthedeep.echo_strike": "Echo Strike",
+  "enchantment.echoesofthedeep.echo_strike.desc": "Applies a damage-over-time effect to the target. Damage increases with nearby enemies (up to 2 per level of the enchantment).",
+  "enchantment.echoesofthedeep.soul_harvester": "Soul Harvest",
   "enchantment.echoesofthedeep.soul_harvester.desc": "Mobs will drop more experience when killed.",
-  "enchantment.echoesofthedeep.life_harvester": "Life Harvester",
+  "enchantment.echoesofthedeep.life_harvester": "Life Harvest",
   "enchantment.echoesofthedeep.life_harvester.desc": "Mobs will drop more experience when killed.",
 
-  "effect.echoesofthedeep.echo_collapse": "Echo Collapse",
+  "effect.echoesofthedeep.echo_strike": "Echo Strike",
 
   "item.minecraft.potion.effect.blindness": "Potion of Blindness",
   "item.minecraft.potion.effect.long_blindness": "Potion of Blindness",

@@ -1,10 +1,8 @@
 package com.spokiy.echoesofthedeep.mixin;
 
 
-import com.spokiy.echoesofthedeep.server.util.SculkShriekerTickBridge;
+import com.spokiy.echoesofthedeep.util.SculkShriekerTickBridge;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;

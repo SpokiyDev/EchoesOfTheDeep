@@ -2,7 +2,7 @@ package com.spokiy.echoesofthedeep.server.block.entity;
 
 import com.spokiy.echoesofthedeep.server.block.SculkGuardianBlock;
 import com.spokiy.echoesofthedeep.server.block.EDBlockEntities;
-import com.spokiy.echoesofthedeep.server.util.Utils;
+import com.spokiy.echoesofthedeep.util.Utils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;

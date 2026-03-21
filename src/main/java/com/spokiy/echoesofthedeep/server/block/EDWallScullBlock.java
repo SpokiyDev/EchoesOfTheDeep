@@ -17,9 +17,4 @@ public class EDWallScullBlock extends WallSkullBlock {
         return new EDSkullBlockEntity(pos, state);
     }
 
-    public enum EDTypes implements SkullBlock.Type {
-        WARDEN
-
-    }
-
 }

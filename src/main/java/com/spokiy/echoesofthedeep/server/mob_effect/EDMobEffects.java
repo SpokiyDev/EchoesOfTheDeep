@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class EDMobEffects {
     public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, EchoesOfTheDeep.MOD_ID);
 
-    public static final RegistryObject<MobEffect> ECHO_COLLAPSE = EFFECTS.register("echo_collapse", EchoCollapseEffect::new);
+//    public static final RegistryObject<MobEffect> ECHO_STRIKE = EFFECTS.register("echo_strike", EchoStrikeEffect::new);
 
 
     public static void register(IEventBus eventBus) {

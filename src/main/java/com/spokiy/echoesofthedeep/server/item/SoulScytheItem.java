@@ -2,10 +2,14 @@ package com.spokiy.echoesofthedeep.server.item;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -14,6 +18,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -72,11 +77,46 @@ public class SoulScytheItem extends DiggerItem implements Vanishable {
 
     @Override
     public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-        return enchantment == Enchantments.MOB_LOOTING || enchantment.category == EnchantmentCategory.DIGGER;
+        return enchantment == Enchantments.MOB_LOOTING || enchantment.category == EnchantmentCategory.DIGGER || enchantment.category == EDEnchantments.SOUL_SCYTHE_CATEGORY;
     }
 
     @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, @NotNull TooltipFlag flagIn) {
         tooltip.add(Component.translatable("item.echoesofthedeep.soul_scythe.desc").withStyle(ChatFormatting.DARK_GREEN));
     }
+
+
+    // Bars
+    @Override
+    public boolean isBarVisible(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if(tag != null && tag.contains("echoesofthedeep:echo_strike_charge")) return true;
+
+        return super.isBarVisible(stack);
+    }
+
+    @Override
+    public int getBarWidth(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if(tag != null && tag.contains("echoesofthedeep:echo_strike_charge")) return 13;
+
+        return super.getBarWidth(stack);
+    }
+
+    @Override
+    public int getBarColor(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if(tag != null && tag.contains("echoesofthedeep:echo_strike_charge")) return 0xffd000;
+
+        return super.getBarColor(stack);
+    }
+
+    @Override
+    public void inventoryTick(ItemStack stack, @NotNull Level level, @NotNull Entity entity, int slotId, boolean isSelected) {
+        if (EnchantmentHelper.getTagEnchantmentLevel(EDEnchantments.ECHO_STRIKE.get(), stack) == 0) {
+            CompoundTag tag = stack.getTag();
+            if(tag != null) tag.remove("echoesofthedeep:echo_strike_charge");
+        }
+    }
+
 }

@@ -27,19 +27,17 @@ public class WardenHeadModel extends SkullModel {
         head.addOrReplaceChild(
                 "right_tendril",
                 CubeListBuilder.create().texOffs(58, 38).addBox(
-                                -10.0F, -10.0F, 0.001F,
-                                10.0F, 10.0F, 0.0F),
+                        -10.0F, -10.0F, 0.001F,
+                        10.0F, 10.0F, 0.0F),
                 PartPose.offset(-8.0F, -5.0F, -1.0F)
         );
         head.addOrReplaceChild(
                 "left_tendril",
                 CubeListBuilder.create().texOffs(58, 6).addBox(
-                                0.0F, -10.0F, 0.0F,
-                                10.0F, 10.0F, 0.0F),
+                        0.0F, -10.0F, 0.0F,
+                        10.0F, 10.0F, 0.0F),
                 PartPose.offset(8.0F, -5.0F, -1.0F)
         );
-
-
 
         return LayerDefinition.create(mesh, 128, 128);
     }

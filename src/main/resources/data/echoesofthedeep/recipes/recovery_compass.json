@@ -1,0 +1,11 @@
+{
+  "type": "echoesofthedeep:sculk_shrieker",
+  "ingredients": [
+    { "item": "minecraft:compass", "count": 1 },
+    { "item": "minecraft:echo_shard", "count": 4 }
+  ],
+  "output": {
+    "item": "minecraft:recovery_compass",
+    "count": 1
+  }
+}

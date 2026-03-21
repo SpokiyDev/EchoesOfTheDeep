@@ -1,4 +1,4 @@
-package com.spokiy.echoesofthedeep.server.util;
+package com.spokiy.echoesofthedeep.util;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import net.minecraft.core.registries.Registries;

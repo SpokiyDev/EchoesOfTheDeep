@@ -3,7 +3,7 @@
   "ingredients": [
     { "item": "minecraft:netherite_hoe", "count": 1 },
     { "item": "minecraft:echo_shard", "count": 4 },
-    { "item": "minecraft:skull", "count": 2 }
+    { "item": "minecraft:skeleton_skull", "count": 2 }
   ],
   "output": {
     "item": "echoesofthedeep:soul_scythe",

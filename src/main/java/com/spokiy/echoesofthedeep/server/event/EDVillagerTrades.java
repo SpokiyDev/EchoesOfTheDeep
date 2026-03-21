@@ -1,6 +1,6 @@
 package com.spokiy.echoesofthedeep.server.event;
 
-import com.spokiy.echoesofthedeep.server.util.EDTags;
+import com.spokiy.echoesofthedeep.util.EDTags;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;

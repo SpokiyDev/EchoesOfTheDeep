@@ -1,9 +1,11 @@
-package com.spokiy.echoesofthedeep.server.util;
+package com.spokiy.echoesofthedeep.util;
 
 import com.spokiy.echoesofthedeep.config.EDConfigs;
 import com.spokiy.echoesofthedeep.server.item.SoulScytheItem;
+import com.spokiy.echoesofthedeep.server.mob_effect.EDMobEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ItemParticleOption;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.server.level.ServerLevel;
@@ -11,6 +13,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -21,6 +24,10 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
 public class Utils {
+    public static int randomRange(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
+
     public static AABB newSweepHitBox(ItemStack stack, Player player, Entity target) {
         AABB original = stack.getSweepHitBox(player, target);
         if (!(stack.getItem() instanceof SoulScytheItem)) return original;
@@ -82,6 +89,25 @@ public class Utils {
                         0, 0, 0,
                         0.065D);
             }
+        }
+    }
+
+    public static void spawnParticleBeam(ServerLevel level, ParticleOptions particle, Vec3 start, Vec3 end, double step) {
+        Vec3 direction = end.subtract(start);
+        double length = direction.length();
+
+        Vec3 normalized = direction.normalize();
+
+        for (double i = 0; i < length; i += step) {
+            Vec3 pos = start.add(normalized.scale(i));
+
+            level.sendParticles(
+                    particle,
+                    pos.x, pos.y, pos.z,
+                    1,
+                    0,0,0,
+                    0
+            );
         }
     }
 

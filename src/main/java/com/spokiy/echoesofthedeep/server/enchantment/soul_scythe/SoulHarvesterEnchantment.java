@@ -1,5 +1,6 @@
-package com.spokiy.echoesofthedeep.server.enchantment;
+package com.spokiy.echoesofthedeep.server.enchantment.soul_scythe;
 
+import com.spokiy.echoesofthedeep.server.enchantment.EDEnchantments;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.enchantment.Enchantment;
 import org.jetbrains.annotations.NotNull;

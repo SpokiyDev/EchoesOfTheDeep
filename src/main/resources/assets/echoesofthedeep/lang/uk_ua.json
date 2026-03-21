@@ -18,14 +18,14 @@
 
   "enchantment.echoesofthedeep.reaper": "Жнець",
   "enchantment.echoesofthedeep.reaper.desc": "Збільшує шкоду від розмашистих атак аж до повної шкоди.",
-  "enchantment.echoesofthedeep.resonance": "Резонанс",
-  "enchantment.echoesofthedeep.resonance.desc": "Завдає шкоди цілі протягом часу. Шкода зростає залежно від кількості ворогів поруч (макс. 2 ворога на рівень зачарування).",
+  "enchantment.echoesofthedeep.echo_strike": "Удар відлуння",
+  "enchantment.echoesofthedeep.echo_strike.desc": "Завдає шкоди цілі протягом часу. Шкода зростає залежно від кількості ворогів поруч (макс. 2 ворога на рівень зачарування).",
   "enchantment.echoesofthedeep.soul_harvester": "Збирач душ",
   "enchantment.echoesofthedeep.soul_harvester.desc": "Збільшує к-ть досвіду з мобів, коли їх убивають.",
   "enchantment.echoesofthedeep.life_harvester": "Збирач життів",
   "enchantment.echoesofthedeep.life_harvester.desc": "Mobs will drop more experience when killed.",
 
-  "effect.echoesofthedeep.echo_collapse": "Відлуння розрухи",
+  "effect.echoesofthedeep.echo_strike": "Удар відлуння",
 
   "item.minecraft.potion.effect.blindness": "Зілля сліпоти",
   "item.minecraft.potion.effect.long_blindness": "Зілля сліпоти",

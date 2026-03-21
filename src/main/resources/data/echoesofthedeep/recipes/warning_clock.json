@@ -1,0 +1,11 @@
+{
+  "type": "echoesofthedeep:sculk_shrieker",
+  "ingredients": [
+    { "item": "minecraft:clock", "count": 1 },
+    { "item": "minecraft:echo_shard", "count": 4 }
+  ],
+  "output": {
+    "item": "echoesofthedeep:warning_clock",
+    "count": 1
+  }
+}

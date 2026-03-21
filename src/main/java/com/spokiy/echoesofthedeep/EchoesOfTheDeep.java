@@ -34,6 +34,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+import java.util.Locale;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(EchoesOfTheDeep.MOD_ID)
 public class EchoesOfTheDeep
@@ -99,9 +101,15 @@ public class EchoesOfTheDeep
                 EDItemProperties.register();
                 EDEntityRenders.register();
                 // Skulls
-                SkullBlockRenderer.SKIN_BY_TYPE.put(EDWallScullBlock.EDTypes.WARDEN, ResourceLocation.parse("textures/entity/warden/warden.png"));
+                SkullBlockRenderer.SKIN_BY_TYPE.put(EDBlocks.EDSkullTypes.WARDEN, ResourceLocation.parse("textures/entity/warden/warden.png"));
             });
         }
 
     }
+
+
+    public static ResourceLocation prefix(String name) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, name.toLowerCase(Locale.ROOT));
+    }
+
 }

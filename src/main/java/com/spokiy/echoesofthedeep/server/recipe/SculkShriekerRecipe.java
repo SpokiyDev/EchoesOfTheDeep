@@ -85,13 +85,17 @@ public class SculkShriekerRecipe implements Recipe<Container> {
         return list;
     }
 
+    public NonNullList<CountedIngredient> getCountedIngredients() {
+        return inputItems;
+    }
+
     @Override
     public boolean canCraftInDimensions(int width, int height) {
         return true;
     }
 
     @Override
-    public @NotNull ItemStack getResultItem(@NotNull RegistryAccess registryAccess) {
+    public ItemStack getResultItem(@Nullable RegistryAccess registryAccess) {
         return output.copy();
     }
 

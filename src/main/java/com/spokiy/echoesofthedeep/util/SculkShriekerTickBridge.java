@@ -1,4 +1,4 @@
-package com.spokiy.echoesofthedeep.server.util;
+package com.spokiy.echoesofthedeep.util;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;

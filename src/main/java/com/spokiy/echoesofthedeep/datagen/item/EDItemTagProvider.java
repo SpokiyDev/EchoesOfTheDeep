@@ -2,7 +2,7 @@ package com.spokiy.echoesofthedeep.datagen.item;
 
 import com.spokiy.echoesofthedeep.EchoesOfTheDeep;
 import com.spokiy.echoesofthedeep.server.item.EDItems;
-import com.spokiy.echoesofthedeep.server.util.EDTags;
+import com.spokiy.echoesofthedeep.util.EDTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;

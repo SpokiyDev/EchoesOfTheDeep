@@ -9,7 +9,12 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.SkullBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -28,8 +33,16 @@ public class EDWardenHeadBlock extends EDWallScullBlock {
     ));
 
     public EDWardenHeadBlock(Properties properties) {
-        super(EDWallScullBlock.EDTypes.WARDEN, properties);
+        super(EDBlocks.EDSkullTypes.WARDEN, properties);
     }
+
+//    @Override
+//    @Nullable public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, @NotNull BlockState state, @NotNull BlockEntityType<T> blockEntityType) {
+//        if (pLevel.isClientSide) {
+//            return createTickerHelper(blockEntityType, BlockEntityType.SKULL, SkullBlockEntity::animation);
+//        }
+//        return null;
+//    }
 
     @Override
     public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
